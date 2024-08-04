@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import splash from './assets/images/home/hello-splash.gif';
+import archery from './assets/images/home/archery.jpg';
+import archerycrop from './assets/images/home/archery-crop.jpg';
 import './assets/css/style.css';
 
 function HomeScreen() {
@@ -33,29 +35,55 @@ function HomeScreen() {
             </div>
             <div id="splash">
                 <img alt = "Big Hello" src={splash} />
-                <div id="down-arrow-container">
-                    <a id="down-arrow" href="#intro">
+                <div className="down-arrow-container">
+                    <a className="down-arrow" href="#intro">
                         <i className="fa-solid fa-arrow-down"></i>
                     </a>
                 </div>
             </div>
-            <div id="intro" className="grid-container">
+            <div id="archery" className="grid-container grid-left">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>Hello! I'm Kam Yau Shing.</strong>
+                        <strong>I'm an archer <i class="fa-solid fa-bullseye"></i></strong>
                     </p>
                     </div>
-                <div className="grid-item grid-item-image">2</div>
-                <div className="grid-item grid-item-body">3</div>
+                <div className="grid-item grid-item-image">
+                    <div className="image-overlay"></div>
+                    <div className="grid-item-image-container">
+                        <div className="grid-item-image-image-container"> 
+                            <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                        </div>
+                        <p className="grid-item-image-caption">
+                            Me shooting my mordern recurve <i class="fa-solid fa-arrow-turn-up"></i>
+                        </p>
+                    </div>
+                    <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                </div>
+                <div className="grid-item grid-item-body body-text">
+                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the modern Recuve, I can consistently land arrows within 12 centimeter diameter at 18 metres; with the Compound, 30, and with the Traditional, 12.
+                </div>
             </div>
-            <div id="archery" className="grid-container">
+            <div id="coder" className="grid-container grid-right">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>Hello! I'm Kam Yau Shing.</strong>
+                        <strong>I'm an archer <i class="fa-solid fa-bullseye"></i></strong>
                     </p>
                     </div>
-                <div className="grid-item grid-item-image">2</div>
-                <div className="grid-item grid-item-body">3</div>
+                <div className="grid-item grid-item-image">
+                    <div className="image-overlay"></div>
+                    <div className="grid-item-image-container">
+                        <div className="grid-item-image-image-container"> 
+                            <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                        </div>
+                        <p className="grid-item-image-caption">
+                            Me shooting my mordern recurve <i class="fa-solid fa-arrow-turn-up"></i>
+                        </p>
+                    </div>
+                    <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                </div>
+                <div className="grid-item grid-item-body body-text">
+                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the modern Recuve, I can consistently land arrows within 12 centimeter diameter at 18 metres; with the Compound, 30, and with the Traditional, 12.
+                </div>
             </div>
         </div>
     );

@@ -9,6 +9,10 @@
     margin-bottom: 0px;
 }
 
+.body-text {
+    font-size: 25px !important;
+}
+
 /* HOME */
 
 #splash {
@@ -29,7 +33,7 @@
     margin: auto;
 }
 
-#down-arrow-container {
+.down-arrow-container {
     display: flex;
     height: auto;
     width: 100lvw;
@@ -40,7 +44,7 @@
 }
 
 
-#down-arrow {
+.down-arrow {
     align-self: center;
     z-index: 99; /* Make sure it does not overlap */
     color: white; /* Text color */
@@ -49,7 +53,7 @@
     font-size: 18px; /* Increase font size */
 }
 
-#down-arrow:hover {
+.down-arrow:hover {
     color: lightgray;
 }
 
@@ -61,7 +65,6 @@
 .grid-container {
     height: calc(calc(100lvh - 50px) / 1);
     display: grid;
-    grid-template-columns: auto auto;
 }
 
 .grid-item {
@@ -72,39 +75,173 @@
     text-align: center;
 }
 
-.grid-item-title {
+.grid-left>.grid-item-title {
     grid-column: 1;
     grid-row: 1;
     text-align: left;
+    z-index: 21;
 }
 
-.grid-item-body {
+.grid-left>.grid-item-body {
     grid-column: 1;
     grid-row: 2 / span 3;
+    z-index: 20;
 }
-@media only screen and (min-width: 601px) {
+
+.grid-right>.grid-item-title {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    z-index: 21;
+}
+
+.grid-right>.grid-item-body {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+    z-index: 20;
+}
+
+@media only screen and (min-width: 600px) {
     .grid-container {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-content: center;
     }
 
-    .grid-item-image {
+    .grid-item {
+        border: 0px solid rgba(0, 0, 0, 0.8);
+    }
+
+    .grid-item-title {
+        font-size: 50px;
+        text-align: center !important;
+    }
+
+    .grid-left>.grid-item-image {
         grid-column: 2;
         grid-row: 1 / span 4;
     }
+
+    .grid-right>.grid-item-image {
+        grid-column: 1;
+        grid-row: 1 / span 4;
+    }
+
+    .grid-item-image-image-inside-container {
+        opacity: 1;
+        width: calc(45lvw - 60px);
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .grid-item-image-image-container {
+        overflow: hidden;
+        height: calc(100lvh - 130px);
+        display:flex;
+        padding:20px;
+    }
+
+    .grid-item-image-container {
+        opacity: 1;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: rgb(150, 198, 241);
+        border-radius: 25px;
+    }
+
+    .grid-item-image-caption {
+        opacity: 1;
+        font-size: 15px;
+        margin-top: -15px;
+        margin-bottom: 20px;
+    }
+
+    .grid-item-image-image {
+        opacity: 0;
+        scale: 0;
+        height: 0;
+        width: 0;
+    }
 }
 @media only screen and (max-width: 600px) {
+    .grid-right>.grid-item-title {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+        z-index: 21;
+    }
+    
+    .grid-right>.grid-item-body {
+        grid-column: 1;
+        grid-row: 2 / span 3;
+        z-index: 20;
+    }
+
     .grid-container {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item-image-caption {
+        opacity: 0;
+        font-size: 0px;
+    }
+
+    .grid-item-image-container {
+        opacity: 0;
+        scale: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .grid-item-image-image-inside-container {
+        opacity: 0;
+        scale: 0;
+        width: 0;
+        height: 0;
     }
 
     .grid-item-image {
+        display: grid;
+        grid-column: 1;
+        grid-row: 1 / span 4;
+        grid-template-columns: 1fr;
         border: none;
         padding: 0px;
         margin: 0px;
         z-index: 1;
         font-size: 30px;
         text-align: center;
-        grid-column: 1;
-        grid-row: 1 / span 4;
+        overflow: hidden;
+    }
+
+    .grid-item-image-image {
+        opacity: 1;
+        z-index: 1;
+        width: 100lvw;
+        object-fit: cover;
+    }
+
+    .grid-item-image>*{
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .image-overlay {
+        height: 100%;
+        width: 100%;
+        opacity: 50%;
+        z-index: 2;
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .grid-item-image-image {
+        height: 100lvh;
+        background-position: left center;
     }
 }

@@ -1,4 +1,6 @@
 04 August 2024
+- Added archery content + left/right grid options
+- Changed down arrow to a class from id
 - Added splash background
 - Added grid for body
 - Finalised Splash GIF
