@@ -1,0 +1,14 @@
+.navbar-brand-image {
+    height: 50px;
+    float: left;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+#big-cover {
+    height: calc(100lvh - 50px);
+    width: 100lvw;
+    background-color: black;
+}
