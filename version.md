@@ -1,4 +1,8 @@
 04 August 2024
+- Added splash background
+- Added grid for body
+- Finalised Splash GIF
+- Removed the BTS
 - Added BTS for the splash images
 - Added cover splash images and code to remove the gif background, not the actual one yet
 - Added a license

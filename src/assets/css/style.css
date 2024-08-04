@@ -11,8 +11,100 @@
 
 /* HOME */
 
-#big-cover {
-    height: calc(100lvh - 50px);
+#splash {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/home/compound-landscape.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: cover;
+    height: 100svh;
     width: 100lvw;
-    background-color: black;
+    opacity: 0.5;
+    text-align: center;
+    display: flex;
+}
+
+#splash>img {
+    width: 50lvw;
+    margin: auto;
+}
+
+#down-arrow-container {
+    display: flex;
+    height: auto;
+    width: 100lvw;
+    position: absolute;
+    bottom: 20px;
+    justify-content: center;
+    animation: point-down 1s ease-in-out infinite alternate;
+}
+
+
+#down-arrow {
+    align-self: center;
+    z-index: 99; /* Make sure it does not overlap */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    font-size: 18px; /* Increase font size */
+}
+
+#down-arrow:hover {
+    color: lightgray;
+}
+
+@keyframes point-down {
+    0% {bottom: 20px}
+    100% {bottom:10px}
+}
+
+.grid-container {
+    height: calc(calc(100lvh - 50px) / 1);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-item-title {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+}
+
+.grid-item-body {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+}
+@media only screen and (min-width: 601px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .grid-item-image {
+        grid-column: 2;
+        grid-row: 1 / span 4;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .grid-item-image {
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        z-index: 1;
+        font-size: 30px;
+        text-align: center;
+        grid-column: 1;
+        grid-row: 1 / span 4;
+    }
 }
