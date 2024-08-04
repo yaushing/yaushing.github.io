@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 .navbar-brand-image {
     height: 50px;
     float: left;
@@ -6,6 +8,8 @@
 .navbar {
     margin-bottom: 0px;
 }
+
+/* HOME */
 
 #big-cover {
     height: calc(100lvh - 50px);
