@@ -13,6 +13,106 @@
     font-size: 25px !important;
 }
 
+.grid-item-body>a {
+    text-decoration: underline;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0;
+    color: inherit;    
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.grid-item-body>a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.grid-item-body>a:hover {
+    text-decoration: underline;
+    background-color: darkgray;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, padding .5s ease-in-out;
+}
+
+.grid-item-body>a:active {
+    background-color: black;
+}
+
+hoverbtn {
+    text-decoration: underline;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0;
+    color: inherit;    
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, padding .5s ease-in-out;
+    cursor: pointer;
+}
+
+hoverbtn:hover {
+    position: absolute;
+    text-decoration: underline;
+    background-color: darkgray;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, padding .5s ease-in-out;
+}
+
+.hoverbtn-image-container {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    transition: height .5s ease-in-out, width .5s ease-in-out;
+}
+
+hoverbtn:hover>.hoverbtn-image-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 25%;
+    bottom: 50px;
+    transition: height .5s ease-in-out, width .5s ease-in-out;
+}
+
+.hoverbtn-image-container>.hoverbtn-image {
+    width: 100px !important;
+    height: 100px !important;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
+    width: 100px !important;
+    height: 100px !important;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+}
+
+/*
+hoverbtn{
+    position:relative;
+}
+hoverbtn:after{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:34;
+    top:calc(100% + 1em);
+    left:1rem;
+    width:14rem;
+    padding-bottom:14rem;
+    visibility:hidden;
+    background-size:cover
+}
+hoverbtn:focus:after,hoverbtn:hover:after{
+    background-image:url(../../assets/images/home/modernrecurve.jpeg);
+    transition:visibility 0s .2s;
+    visibility:visible
+    
+}*/
+
 /* HOME */
 
 #splash {
@@ -46,11 +146,11 @@
 
 .down-arrow {
     align-self: center;
-    z-index: 99; /* Make sure it does not overlap */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    font-size: 18px; /* Increase font size */
+    z-index: 99;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    font-size: 18px; 
 }
 
 .down-arrow:hover {
@@ -63,7 +163,7 @@
 }
 
 .grid-container {
-    height: calc(calc(100lvh - 50px) / 1);
+    height: max(calc(100lvh - 50px), fit-content);
     display: grid;
 }
 
@@ -113,8 +213,11 @@
     }
 
     .grid-item-title {
-        font-size: 50px;
+        font-size: min(6vw, 50px);
         text-align: center !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .grid-left>.grid-item-image {
@@ -168,6 +271,13 @@
     }
 }
 @media only screen and (max-width: 600px) {
+    .spacer {
+        scale: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
     .grid-right>.grid-item-title {
         grid-column: 1;
         grid-row: 1;
@@ -181,8 +291,13 @@
         z-index: 20;
     }
 
+    .grid-item-body {
+        overflow: hidden;
+    }
+
     .grid-container {
         grid-template-columns: 1fr;
+        height: calc(calc(100lvh - 50px) / 1);
     }
 
     .grid-item-image-caption {

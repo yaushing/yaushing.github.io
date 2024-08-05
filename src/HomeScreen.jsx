@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import splash from './assets/images/home/hello-splash.gif';
 import archery from './assets/images/home/archery.jpg';
 import archerycrop from './assets/images/home/archery-crop.jpg';
+import modernrecurve from './assets/images/home/modernrecurve.jpeg';
+import compound from './assets/images/home/compound.jpg'
+import trad from './assets/images/home/traditional.jpg';
 import './assets/css/style.css';
 
 function HomeScreen() {
@@ -60,13 +63,18 @@ function HomeScreen() {
                     <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                 </div>
                 <div className="grid-item grid-item-body body-text">
-                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the modern Recuve, I can consistently land arrows within 12 centimeter diameter at 18 metres; with the Compound, 30, and with the Traditional, 12.
+                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <hoverbtn><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</hoverbtn>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <hoverbtn><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</hoverbtn>, 30m (99ft), <br />and with the <hoverbtn><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</hoverbtn>, 12m (40ft).
                 </div>
+            </div>
+            <div className = "spacer">
+            <br />
+            <hr />
+            <br />
             </div>
             <div id="coder" className="grid-container grid-right">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>I'm an archer <i class="fa-solid fa-bullseye"></i></strong>
+                        <strong>I'm a coder <i class="fa-solid fa-laptop"></i></strong>
                     </p>
                     </div>
                 <div className="grid-item grid-item-image">
@@ -82,7 +90,7 @@ function HomeScreen() {
                     <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                 </div>
                 <div className="grid-item grid-item-body body-text">
-                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the modern Recuve, I can consistently land arrows within 12 centimeter diameter at 18 metres; with the Compound, 30, and with the Traditional, 12.
+                    Having been coding for almost a decade, I'm now a full-stack developer and competitive coder, currently working on Pure Pursuit in python for <a href="https://github.com/roboapex/aps">LEGO® SPIKE</a>. Other than that, my projects can be found <a href="/projects">here</a>. I also have a few <a href="/achievements">awards</a> in some informatics olympiads.
                 </div>
             </div>
         </div>
