@@ -12,8 +12,7 @@
     "react-router": "^6.26.0",
     "react-router-dom": "^6.26.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "postcss": ">=8.4.31"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "postcss": ">=8.4.31"
+    "gh-pages": "^6.1.1"
   }
 }
