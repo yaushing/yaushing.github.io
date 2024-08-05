@@ -1,3 +1,8 @@
+06 August 2024
+- Added projects GIF
+- Started content for 3rd Home
+- Attempt add responsive text
+
 05 August 2024
 - Fixed multi page router
 - Made Splash compatible for all screens
