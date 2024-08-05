@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import splash from './assets/images/home/hello-splash.gif';
+import splash from './assets/projects/images/projects-splash.gif';
 import './assets/css/style.css';
 
 function ProjectsScreen() {

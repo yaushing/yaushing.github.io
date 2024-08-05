@@ -91,7 +91,7 @@ hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
 }
 
 .grid-container {
-    height: max(calc(100lvh - 50px), fit-content);
+    height: calc(100lvh - 50px);
     display: grid;
 }
 
@@ -130,6 +130,17 @@ hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
 }
 
 @media only screen and (min-width: 600px) {
+    .grid-item-body {
+        border: rgba(0, 0, 0, 0.8) 1px solid !important;
+        border-radius: 25px;
+        overflow: scroll;
+    }
+
+    .grid-item-image {
+        background-color: rgb(150, 198, 241);
+        border-radius: 25px;
+    }
+
     .grid-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -146,6 +157,8 @@ hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgb(150, 198, 241);
+        border-radius: 25px;
     }
 
     .grid-left>.grid-item-image {
@@ -180,8 +193,6 @@ hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        background-color: rgb(150, 198, 241);
-        border-radius: 25px;
     }
 
     .grid-item-image-caption {
