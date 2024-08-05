@@ -1,4 +1,5 @@
 05 August 2024
+- Fixed multi page router
 - Made Splash compatible for all screens
 - Increased GIF holding speed
 - Fixed text overflowing as it turns from landscape to portrait

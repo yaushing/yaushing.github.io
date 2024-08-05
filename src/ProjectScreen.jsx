@@ -31,7 +31,9 @@ function ProjectScreen() {
                 </nav>
             </div>
             <div className="splash">
-                <img alt = "Big Hello" src={splash} />
+                <div className="overlay" />
+                <img alt = "Splash bg" className="bg" />
+                <img alt = "Big Hello" className="anim" src={splash} />
                 <div className="down-arrow-container">
                     <a className="down-arrow" href="#intro">
                         <i className="fa-solid fa-arrow-down"></i>
