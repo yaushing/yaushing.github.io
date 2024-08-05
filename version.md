@@ -1,4 +1,8 @@
 05 August 2024
+- Made Splash compatible for all screens
+- Increased GIF holding speed
+- Fixed text overflowing as it turns from landscape to portrait
+- Fixed floating pictures crashing text
 - Added flaoting pictures for archery
 
 04 August 2024

@@ -44,122 +44,50 @@ hoverbtn {
     text-decoration: underline;
     background-color: transparent;
     border-radius: 5px;
+    color: inherit;
     padding: 0 0 0 0;
-    color: inherit;    
-    transition: background-color .5s ease-in-out, color .5s ease-in-out, padding .5s ease-in-out;
+    border-radius: 10px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, position .25s ease-in-out, padding .5s ease-in-out;
     cursor: pointer;
 }
 
 hoverbtn:hover {
-    position: absolute;
+    position: relative;
     text-decoration: underline;
     background-color: darkgray;
-    border-radius: 5px;
-    padding: 5px 5px 5px 5px;
     color: white;
-    transition: background-color .25s ease-in-out, color .25s ease-in-out, padding .5s ease-in-out;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, position .25s ease-in-out, padding .25s ease-in-out;
 }
 
 .hoverbtn-image-container {
     position: absolute;
-    width: 0px;
-    height: 0px;
-    transition: height .5s ease-in-out, width .5s ease-in-out;
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+    transition: height .5s ease-in-out, width .5s ease-in-out, bottom .5s ease-in-out;
 }
 
 hoverbtn:hover>.hoverbtn-image-container {
     position: absolute;
     width: 100px;
     height: 100px;
-    left: 25%;
     bottom: 50px;
-    transition: height .5s ease-in-out, width .5s ease-in-out;
+    left: calc(50% - 50px);
+    transition: height .25s ease-in-out, width .25s ease-in-out, bottom .25s ease-in-out;
 }
 
 .hoverbtn-image-container>.hoverbtn-image {
     width: 100px !important;
     height: 100px !important;
     opacity: 0;
-    transition: opacity .5s ease-in-out;
 }
 
 hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
     width: 100px !important;
-    height: 100px !important;
+    height: 100px !important;;
     opacity: 1;
-    transition: opacity .25s ease-in-out;
-}
-
-/*
-hoverbtn{
-    position:relative;
-}
-hoverbtn:after{
-    content:"";
-    display:block;
-    position:absolute;
-    z-index:34;
-    top:calc(100% + 1em);
-    left:1rem;
-    width:14rem;
-    padding-bottom:14rem;
-    visibility:hidden;
-    background-size:cover
-}
-hoverbtn:focus:after,hoverbtn:hover:after{
-    background-image:url(../../assets/images/home/modernrecurve.jpeg);
-    transition:visibility 0s .2s;
-    visibility:visible
-    
-}*/
-
-/* HOME */
-
-#splash {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/home/compound-landscape.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right center;
-    background-size: cover;
-    height: 100svh;
-    width: 100lvw;
-    opacity: 0.5;
-    text-align: center;
-    display: flex;
-}
-
-#splash>img {
-    width: 50lvw;
-    margin: auto;
-}
-
-.down-arrow-container {
-    display: flex;
-    height: auto;
-    width: 100lvw;
-    position: absolute;
-    bottom: 20px;
-    justify-content: center;
-    animation: point-down 1s ease-in-out infinite alternate;
-}
-
-
-.down-arrow {
-    align-self: center;
-    z-index: 99;
-    color: white; 
-    cursor: pointer; 
-    padding: 15px;
-    font-size: 18px; 
-}
-
-.down-arrow:hover {
-    color: lightgray;
-}
-
-@keyframes point-down {
-    0% {bottom: 20px}
-    100% {bottom:10px}
 }
 
 .grid-container {
@@ -293,6 +221,7 @@ hoverbtn:focus:after,hoverbtn:hover:after{
 
     .grid-item-body {
         overflow: hidden;
+        font-size: min(4.5vw, 20px) !important;
     }
 
     .grid-container {
@@ -352,6 +281,10 @@ hoverbtn:focus:after,hoverbtn:hover:after{
         z-index: 2;
         background-color: white;
     }
+
+    .navbar-brand {
+        font-size: 0px;
+    }
 }
 
 @media only screen and (max-width: 520px) {
@@ -359,4 +292,70 @@ hoverbtn:focus:after,hoverbtn:hover:after{
         height: 100lvh;
         background-position: left center;
     }
+}
+
+.splash {
+    height: 100svh;
+    width: 100lvw;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100lvw;
+    overflow: hidden;
+}
+
+.splash>.overlay {
+    height: 100svh;
+    width: 100lvw;
+    background-color: black;
+    opacity: 0.5;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 199;
+}
+
+.splash>.bg {
+    overflow: hidden;
+    height: 100lvh;
+    width: 100lvw;
+    object-fit: cover;
+    object-position: 100% 0;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.splash>.anim {
+    width: 50lvw;
+    margin: auto;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 500;
+}
+
+.down-arrow-container {
+    display: flex;
+    height: auto;
+    width: 100lvw;
+    position: absolute;
+    bottom: 20px;
+    justify-content: center;
+    animation: point-down 1s ease-in-out infinite alternate;
+}
+
+
+.down-arrow {
+    align-self: center;
+    z-index: 200;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    font-size: 18px; 
+}
+
+.down-arrow:hover {
+    color: lightgray;
+}
+
+@keyframes point-down {
+    0% {bottom: 20px}
+    100% {bottom:10px}
 }
