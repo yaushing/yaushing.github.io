@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeScreen from './HomeScreen';
-import ProjectScreen from './ProjectScreen';
+import ProjectsScreen from './ProjectsScreen';
 
 
 const App = () => {
@@ -11,8 +11,8 @@ const App = () => {
         {/* A <Routes> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/" element={<HomeScreen />} />
-          <Route path="/project" element={<ProjectScreen />} />
+          <Route path="/" exact element={<HomeScreen />} />
+          <Route path="/projects" element={<ProjectsScreen />} />
           {/* ... other routes */}
         </Routes>
       </div>

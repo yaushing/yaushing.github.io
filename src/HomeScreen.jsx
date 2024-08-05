@@ -30,7 +30,7 @@ function HomeScreen() {
                         <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav navbar-right">
                             <li className="active"><a href="/">Home</a></li>
-                            <li><a href="/project">Projects</a></li>
+                            <li><a href="/projects">Projects</a></li>
                         </ul>
                         </div>
                     </div>

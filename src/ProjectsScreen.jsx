@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import splash from './assets/images/home/hello-splash.gif';
 import './assets/css/style.css';
 
-function ProjectScreen() {
+function ProjectsScreen() {
     return (
         <div className="main-content">
             <div className="navbar-container">
@@ -66,4 +66,4 @@ function ProjectScreen() {
     );
 }
 
-export default ProjectScreen;
+export default ProjectsScreen;
