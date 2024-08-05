@@ -1,3 +1,6 @@
+05 August 2024
+- Added flaoting pictures for archery
+
 04 August 2024
 - Added archery content + left/right grid options
 - Changed down arrow to a class from id
