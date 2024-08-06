@@ -10,7 +10,7 @@
 }
 
 .body-text {
-    font-size: 25px !important;
+    font-size: 25px;
 }
 
 .grid-item-body>a {
@@ -133,6 +133,7 @@ hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
     .grid-item-body {
         border: rgba(0, 0, 0, 0.8) 1px solid !important;
         border-radius: 25px;
+        font-size: min(4vw, 20px);
         overflow: scroll;
     }
 

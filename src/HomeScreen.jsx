@@ -3,6 +3,7 @@ import splashBg from './assets/home/images/compound-landscape.jpg';
 import splash from './assets/home/images/hello-splash.gif';
 import archery from './assets/home/images/archery.jpg';
 import archerycrop from './assets/home/images/archery-crop.jpg';
+import coding from './assets/home/images/coding.jpeg';
 import modernrecurve from './assets/home/images/modernrecurve.jpeg';
 import compound from './assets/home/images/compound.jpg'
 import trad from './assets/home/images/traditional.jpg';
@@ -80,13 +81,13 @@ function HomeScreen() {
                     <div className="image-overlay"></div>
                     <div className="grid-item-image-container">
                         <div className="grid-item-image-image-container"> 
-                            <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                            <img alt="Archery" className="grid-item-image-image-inside-container" src={coding}/>
                         </div>
                         <p className="grid-item-image-caption">
-                            Me shooting my mordern recurve <i class="fa-solid fa-arrow-turn-up"></i>
+                        <i class="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My code for an informatics olympiad question
                         </p>
                     </div>
-                    <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                    <img alt="Code" className="grid-item-image-image" src={coding}/>
                 </div>
                 <div className="grid-item grid-item-body body-text">
                     Having been coding for almost a decade, I'm now a full-stack developer and competitive coder, currently working on Pure Pursuit in python for <a href="https://github.com/roboapex/aps">LEGO® SPIKE</a>. Other than that, my projects can be found <a href="/projects">here</a>. I also have a few <a href="/achievements">awards</a> in some informatics olympiads, like the Perse Coding Team Challenge.
@@ -103,7 +104,7 @@ function HomeScreen() {
                     <div className="image-overlay"></div>
                     <div className="grid-item-image-container">
                         <div className="grid-item-image-image-container"> 
-                            <img alt="Archery" className="grid-item-image-image-inside-container"/>
+                            <img alt="First aid" className="grid-item-image-image-inside-container"/>
                         </div>
                         <p className="grid-item-image-caption">
                             No caption<i class="fa-solid fa-arrow-turn-up"></i>
@@ -112,7 +113,7 @@ function HomeScreen() {
                     <img alt="Red Cross" className="grid-item-image-image" />
                 </div>
                 <div className="grid-item grid-item-body body-text">
-                    Since 2022, I was interested in getting a first aid certification to help others. In March 2024, I finally got my <a href={sfacpdf} target="_blank" rel="noreferrer">Standard First Aid certification</a> from the Singapore Red Cross, accredited by the Singapore Resuscitation and First Aid Council. Now, every other Saturday, with other members of the Singapore Red Cross, I either cycle around Jurong Lake Gardens providing first aid to the injured as part of First Aiders on Wheels, or help bandage blood donors at West Gate Bloodbank, improving the flow of donors while ensuring their comfort.
+                    Since 2022, I was interested in getting a first aid certification to help others. In March 2024, I finally got my <a href={sfacpdf} target="_blank" rel="noreferrer">Standard First Aid certification</a> from the Singapore Red Cross, accredited by the Singapore Resuscitation and First Aid Council. Now, every other Saturday, with other members of the Singapore Red Cross, I either cycle around Jurong Lake Gardens providing first aid to the injured as part of <a href = "https://redcross.sg/first-aiders-on-wheels.html" target = "_blank" rel="noreferrer">First Aiders on Wheels</a>, or help bandage blood donors at West Gate Bloodbank, improving the flow of donors while ensuring their comfort.
                 </div>
             </div>
         </div>

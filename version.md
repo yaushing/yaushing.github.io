@@ -1,3 +1,8 @@
+07 August 2024
+- Added coding pic
+- Changed formatting
+- Question society
+
 06 August 2024
 - Added projects GIF
 - Started content for 3rd Home
