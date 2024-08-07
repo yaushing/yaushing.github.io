@@ -40,7 +40,7 @@
     background-color: black;
 }
 
-hoverbtn {
+.hoverbtn {
     text-decoration: underline;
     background-color: transparent;
     border-radius: 5px;
@@ -51,7 +51,7 @@ hoverbtn {
     cursor: pointer;
 }
 
-hoverbtn:hover {
+.hoverbtn:hover {
     position: relative;
     text-decoration: underline;
     background-color: darkgray;
@@ -69,7 +69,7 @@ hoverbtn:hover {
     transition: height .5s ease-in-out, width .5s ease-in-out, bottom .5s ease-in-out;
 }
 
-hoverbtn:hover>.hoverbtn-image-container {
+.hoverbtn:hover>.hoverbtn-image-container {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -84,9 +84,9 @@ hoverbtn:hover>.hoverbtn-image-container {
     opacity: 0;
 }
 
-hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
+.hoverbtn:hover>.hoverbtn-image-container>.hoverbtn-image {
     width: 100px !important;
-    height: 100px !important;;
+    height: 100px !important;
     opacity: 1;
 }
 

@@ -9,8 +9,18 @@ import compound from './assets/home/images/compound.jpg'
 import trad from './assets/home/images/traditional.jpg';
 import sfacpdf from './assets/home/pdfs/sfac.pdf'
 import './assets/css/style.css';
-
 function HomeScreen() {
+    const vw = document.documentElement.clientHeight;
+    const scrollOne = () => {
+        window.scrollBy(
+            {
+                top: vw - 50,
+                left: 0,
+                behavior : "smooth"
+            }
+        );
+    }
+
     return (
         <div className="main-content">
             <div className="navbar-container">
@@ -43,15 +53,15 @@ function HomeScreen() {
                 <img alt = "Splash bg" className="bg" src={splashBg} />
                 <img alt = "Big Hello" className="anim" src={splash} />
                 <div className="down-arrow-container">
-                    <a className="down-arrow" href="#intro">
-                        <i className="fa-solid fa-arrow-down"></i>
-                    </a>
+                    <div className="down-arrow">
+                        <i className="fa-solid fa-arrow-down" onClick={() => scrollOne()}></i>
+                    </div>
                 </div>
             </div>
             <div id="archery" className="grid-container grid-left">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>I'm an archer <i class="fa-solid fa-bullseye"></i></strong>
+                        <strong>I'm an archer <i className="fa-solid fa-bullseye"></i></strong>
                     </p>
                     </div>
                 <div className="grid-item grid-item-image">
@@ -61,20 +71,20 @@ function HomeScreen() {
                             <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
                         </div>
                         <p className="grid-item-image-caption">
-                            Me shooting my mordern recurve <i class="fa-solid fa-arrow-turn-up"></i>
+                            Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
                         </p>
                     </div>
                     <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                 </div>
                 <div className="grid-item grid-item-body body-text">
-                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><hoverbtn><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</hoverbtn>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><hoverbtn><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</hoverbtn>, 30m (99ft), and with the <br /><hoverbtn><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</hoverbtn>, 12m (40ft).
+                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</div>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</div>, 30m (99ft), and with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</div>, 12m (40ft).
                 </div>
             </div>
             <div className = "spacer"><br /><hr /><br /></div>
             <div id="coder" className="grid-container grid-right">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>I'm a coder <i class="fa-solid fa-laptop"></i></strong>
+                        <strong>I'm a coder <i className="fa-solid fa-laptop"></i></strong>
                     </p>
                     </div>
                 <div className="grid-item grid-item-image">
@@ -84,7 +94,7 @@ function HomeScreen() {
                             <img alt="Archery" className="grid-item-image-image-inside-container" src={coding}/>
                         </div>
                         <p className="grid-item-image-caption">
-                        <i class="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My code for an informatics olympiad question
+                        <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My code for an informatics olympiad question
                         </p>
                     </div>
                     <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -97,7 +107,7 @@ function HomeScreen() {
             <div id="redcross" className="grid-container grid-left">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>I'm a first aider <i class="fa-solid fa-suitcase-medical"></i></strong>
+                        <strong>I'm a first aider <i className="fa-solid fa-suitcase-medical"></i></strong>
                     </p>
                     </div>
                 <div className="grid-item grid-item-image">
@@ -107,7 +117,7 @@ function HomeScreen() {
                             <img alt="First aid" className="grid-item-image-image-inside-container"/>
                         </div>
                         <p className="grid-item-image-caption">
-                            No caption<i class="fa-solid fa-arrow-turn-up"></i>
+                            No caption<i className="fa-solid fa-arrow-turn-up"></i>
                         </p>
                     </div>
                     <img alt="Red Cross" className="grid-item-image-image" />

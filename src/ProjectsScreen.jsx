@@ -3,6 +3,17 @@ import splash from './assets/projects/images/projects-splash.gif';
 import './assets/css/style.css';
 
 function ProjectsScreen() {
+    const vw = document.documentElement.clientHeight;
+    const scrollOne = () => {
+        window.scrollBy(
+            {
+                top: vw - 50,
+                left: 0,
+                behavior : "smooth"
+            }
+        );
+    }
+
     return (
         <div className="main-content">
             <div className="navbar-container">
@@ -33,11 +44,11 @@ function ProjectsScreen() {
             <div className="splash">
                 <div className="overlay" />
                 <img alt = "Splash bg" className="bg" />
-                <img alt = "Big Hello" className="anim" src={splash} />
+                <img alt = "Big my projects" className="anim" src={splash} />
                 <div className="down-arrow-container">
-                    <a className="down-arrow" href="#intro">
-                        <i className="fa-solid fa-arrow-down"></i>
-                    </a>
+                    <div className="down-arrow">
+                        <i className="fa-solid fa-arrow-down" onClick={() => scrollOne()}></i>
+                    </div>
                 </div>
             </div>
             <div id="blah" className="grid-container grid-left">
