@@ -5,6 +5,7 @@ import archery from './assets/home/images/archery.jpg';
 import archerycrop from './assets/home/images/archery-crop.jpg';
 import coding from './assets/home/images/coding.jpeg';
 import modernrecurve from './assets/home/images/modernrecurve.jpeg';
+import arrowGif from './assets/home/images/arrow.gif';
 import compound from './assets/home/images/compound.jpg'
 import trad from './assets/home/images/traditional.jpg';
 import sfacpdf from './assets/home/pdfs/sfac.pdf'
@@ -59,6 +60,9 @@ function HomeScreen() {
                 </div>
             </div>
             <div id="archery" className="grid-container grid-left">
+                <div className="grid-container-overlay-container">
+                    <img alt="Arrow flying across screen" className="grid-container-overlay" src={arrowGif}/>
+                </div>
                 <div className="grid-item grid-item-title">
                     <p>
                         <strong>I'm an archer <i className="fa-solid fa-bullseye"></i></strong>

@@ -41,6 +41,7 @@
 }
 
 .hoverbtn {
+    display: inline;
     text-decoration: underline;
     background-color: transparent;
     border-radius: 5px;
@@ -93,6 +94,20 @@
 .grid-container {
     height: calc(100lvh - 50px);
     display: grid;
+}
+
+.grid-container-overlay-container {
+    height: calc(100lvh - 50px);
+    position: absolute;
+    overflow: hidden;
+    width: 100lvw;
+    z-index: 100;
+}
+
+.grid-container-overlay {
+    min-height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 .grid-item {
@@ -277,8 +292,10 @@
     .grid-item-image-image {
         opacity: 1;
         z-index: 1;
-        width: 100lvw;
+        height: 100lvh;
+        width: 100%;
         object-fit: cover;
+        background-position: left center;
     }
 
     .grid-item-image>*{
@@ -296,13 +313,6 @@
 
     .navbar-brand {
         font-size: 0px;
-    }
-}
-
-@media only screen and (max-width: 520px) {
-    .grid-item-image-image {
-        height: 100lvh;
-        background-position: left center;
     }
 }
 
