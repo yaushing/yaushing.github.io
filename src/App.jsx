@@ -8,12 +8,9 @@ const App = () => {
   return (
     <Router>
       <div>
-        {/* A <Routes> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Routes>
           <Route path="/" exact element={<HomeScreen />} />
           <Route path="/projects" element={<ProjectsScreen />} />
-          {/* ... other routes */}
         </Routes>
       </div>
     </Router>
