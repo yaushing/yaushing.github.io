@@ -13,14 +13,14 @@
     <link rel="icon" href="assets/images/favicon.png" />
     <title>KYS | Home</title>
     <script>
-        if (screen.width <= 950) {
-            window.location = "https://yaushing.github.io/mobile.html";
-        } else {
-            window.location = "https://yaushing.github.io/desktop.html";
-        }
+        window.addEventListener('load', (evet) => {
+            if (screen.width <= 950) {
+                window.location.href = "./mobile.html";
+            }
+        })
     </script>
 </head>
 <body>
 </body>
-
+    unity goes here
 </html>
