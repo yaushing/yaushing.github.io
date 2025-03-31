@@ -18,6 +18,7 @@ A personal website to introduce myself, powered by Unity and WebGL, for purposes
 
  - [Blender](https://www.blender.org)
  - [Daz 3D](https://www.daz3d.com)
+ - [Mixamo](https://www.mixamo.com)
  - [Rokoko](https://www.rokoko.com)
  - [Unity Game Engine](https://unity.com)
  - [WebGL](https://get.webgl.org)
