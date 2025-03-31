@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kamja\\Projects\\yaushing.github.io\\build\\unity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DA89E1-70C6-7D6C-993E-C8F831D35880}|Assembly-CSharp.csproj|c:\\users\\kamja\\projects\\yaushing.github.io\\build\\unity\\assets\\scripts\\povcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DA89E1-70C6-7D6C-993E-C8F831D35880}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\povcam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "POVCam.cs",
+              "DocumentMoniker": "C:\\Users\\kamja\\Projects\\yaushing.github.io\\build\\unity\\Assets\\Scripts\\POVCam.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\POVCam.cs",
+              "ToolTip": "C:\\Users\\kamja\\Projects\\yaushing.github.io\\build\\unity\\Assets\\Scripts\\POVCam.cs",
+              "RelativeToolTip": "Assets\\Scripts\\POVCam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:47:57.486Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
