@@ -1,11 +1,4 @@
 build/blender/*.zip
-build/unity/Library
-build/unity/Logs
-build/unity/Packages
-build/unity/ProjectSettings
-build/unity/UserSettings
-build/unity/.vsconfig
-build/unity/Assembly-CSharp-Editor.csproj
-build/unity/Assembly-CSharp.csproj
-build/unity/unity.sln
+build/unity/*
+!build/unity/Assets
 .DS_Store
