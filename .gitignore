@@ -8,3 +8,4 @@ build/unity/.vsconfig
 build/unity/Assembly-CSharp-Editor.csproj
 build/unity/Assembly-CSharp.csproj
 build/unity/unity.sln
+.DS_Store
