@@ -1,4 +1,4 @@
-build/blender/*.zip
+build/blender/extensions/*.zip
 .DS_Store
 build/blender/main/main-1.blend
 build/blender/main/main-2.blend
