@@ -3,23 +3,32 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.VisualScripting;
+using System;
+using UnityEngine.InputSystem.Controls;
 
 public class MenuController : MonoBehaviour
 {
     [Header("LevelToLoad")]
-    [SerializeField]
-    private string _nextGameLevel;
+    [SerializeField] private string _nextGameLevel;
+    [SerializeField] private GameObject _audioSettings;
 
     [Header("VolumeSettings")]
     [SerializeField] private TMP_Text _volumeTextValue;
     [SerializeField] private Slider _volumeSlider;
-    [SerializeField] private float _volume = 50;
-    [SerializeField] private GameObject confirmationPrompt;
+    [SerializeField] private GameObject _confirmationPrompt;
+    [SerializeField] private TMP_Text _confirmationText;
+    [SerializeField] private float _volume;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _volumeSlider.onValueChanged.AddListener(delegate {CheckVolume(); });
+        AudioListener.volume = 0.5f;
+        PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+        _volumeSlider.value = 0.5f;
+        _volumeTextValue.text = _volumeSlider.value.ToString("0%");
+        _volume = 0.5f;
     }
 
     // Update is called once per frame
@@ -28,19 +37,46 @@ public class MenuController : MonoBehaviour
         
     }
 
-    public void SetVolume(float volume) {
-        AudioListener.volume = volume;
-        _volumeTextValue.text = (volume * 100).ToString("000%");
+    public void OpenAudioSettings() {
+        _audioSettings.SetActive(true);
+        _volumeTextValue.text = _volumeSlider.value.ToString("0%");
     }
 
-    public void VolumeApply() {
+    public void CheckVolume() {
+        Debug.Log(_volumeSlider.value);
+        _volumeTextValue.text = _volumeSlider.value.ToString("0%");
+    }
+
+    public void VolumeConfirmApply() {
+        _confirmationPrompt.SetActive(true);
+        _audioSettings.SetActive(false);
+        _confirmationText.text = "WARNING: Are you sure you want to apply this volume?";
+        _volume = _volumeSlider.value;                                                                                                                                                                       
+    }
+
+    public void VolumeConfirmDefault() {
+        // PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+        _confirmationPrompt.SetActive(true);
+        _audioSettings.SetActive(false);
+        _confirmationText.text = "WARNING: Are you sure you want to reset to defaults?";
+        _volume = 0.5f;         
+    }
+
+    public void VolumeBack() {
+        // PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+        _audioSettings.SetActive(false);
+    }
+
+    public void VolumeConfirmBack() {
+        // PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+        _confirmationPrompt.SetActive(false);
+        _audioSettings.SetActive(true);
+    }
+
+    public void VolumeConfirmEd() {
+        _confirmationPrompt.SetActive(false);
+        AudioListener.volume = _volume;
+        _volumeSlider.value = _volume;
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
-
-    }
-
-    IEnumerator VolumeConfirm(float t) {
-        confirmationPrompt.SetActive(true);
-        yield return new WaitForSeconds(t);
-        confirmationPrompt.SetActive(false);
     }
 }
