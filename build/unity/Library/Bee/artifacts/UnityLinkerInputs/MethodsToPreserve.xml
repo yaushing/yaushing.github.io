@@ -4,7 +4,9 @@
 			<method name="startGame"/>
 		</type>
 		<type fullname="MenuController">
+			<method name="DisplayCredits"/>
 			<method name="OpenAudioSettings"/>
+			<method name="StartGame"/>
 			<method name="VolumeBack"/>
 			<method name="VolumeConfirmApply"/>
 			<method name="VolumeConfirmBack"/>

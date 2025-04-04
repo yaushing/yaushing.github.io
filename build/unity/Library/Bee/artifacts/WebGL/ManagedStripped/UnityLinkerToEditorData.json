@@ -1156,7 +1156,9 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/StartupScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

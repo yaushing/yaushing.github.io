@@ -25,7 +25,7 @@ public class MenuContainerSlide : MonoBehaviour
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        if (rectTransform is not null) {Debug.Log("Animation found...");}
+        if (rectTransform is not null) {Debug.Log("Menu UI rcttransform got");}
         else {Debug.LogError("Couldn't find Menu UI recttransform");}
         rectTransform.anchoredPosition = new Vector2(700, 0);
         backgroundVid.url = startupClip;

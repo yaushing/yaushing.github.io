@@ -41,6 +41,7 @@ extern void U3CswitchToStandardU3Ed__18_System_Collections_IEnumerator_Reset_m29
 extern void U3CswitchToStandardU3Ed__18_System_Collections_IEnumerator_get_Current_mC86F7E8BD9EA46BD2857FE6720B4BBC648C94795 (void);
 extern void MenuController_Start_m88A8FAF8DB4765830F6CA0D4508D5E565B2F68D0 (void);
 extern void MenuController_Update_m15DD6714D46E0384A1F59B62B8A6323C108058D6 (void);
+extern void MenuController_creditsFade_m69849F325341F511585D37998CA711D17551F379 (void);
 extern void MenuController_OpenAudioSettings_m184660A14F48887AE6874D11CFA6BFDAEF3D7521 (void);
 extern void MenuController_CheckVolume_mBFEE6D770C1F139E63C52CDFBB40EAE364AF35D8 (void);
 extern void MenuController_VolumeConfirmApply_mF2EB853BB5B10523490D9A9BBD5AF3E5E1673255 (void);
@@ -48,11 +49,20 @@ extern void MenuController_VolumeConfirmDefault_m8225AEE9FCC192B705FC12539A46EF4
 extern void MenuController_VolumeBack_mA4281A87345FECE9F8FEEF89E021D1FAD835325F (void);
 extern void MenuController_VolumeConfirmBack_mCC51D3BC6BBB514F7950328A2CA8E65E0412E3AC (void);
 extern void MenuController_VolumeConfirmEd_m7085B5C5BFC7B7F006665822AA85865BA311F704 (void);
+extern void MenuController_DisplayCredits_m40538620C83849EA024C566BDCD5F81E329BB3F2 (void);
+extern void MenuController_StartGame_m187D5BCB6C49A8473FDC5D3785713A2B66EAD306 (void);
+extern void MenuController_EndCredits_m5B016D38A645A666A9DD99665C4FD48C8798087C (void);
 extern void MenuController__ctor_m3E178AC64181BB1DB914E825C38F925DDE9C08C1 (void);
-extern void MenuController_U3CStartU3Eb__7_0_m0AE29106B526EF004113BAB7772FB3F2EA5ACA94 (void);
+extern void MenuController_U3CStartU3Eb__13_0_m077F45E3D4307D396D19356B0EC29D18A6DC8216 (void);
+extern void U3CEndCreditsU3Ed__25__ctor_m273AC9D552A47DE41E2FEE7CA5581E9186D92E85 (void);
+extern void U3CEndCreditsU3Ed__25_System_IDisposable_Dispose_m7A53FCDB6F7FF9EDE14F2DF902B4DAC2AE660F61 (void);
+extern void U3CEndCreditsU3Ed__25_MoveNext_mA0F72B4D0E9C2B033A9581CAFCCBB4873EACBC9F (void);
+extern void U3CEndCreditsU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m56A3012311097DA493D412351DAB2B418177106C (void);
+extern void U3CEndCreditsU3Ed__25_System_Collections_IEnumerator_Reset_mA3E2E49FB5470D1FE3BF69431BC651D9B118E9A3 (void);
+extern void U3CEndCreditsU3Ed__25_System_Collections_IEnumerator_get_Current_m5FD8AD72C2C555CE3CEE59066D8A85C3B06FE317 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[45] = 
+static Il2CppMethodPointer s_methodPointers[55] = 
 {
 	MenuContainerSlide_Start_m183AE1065D7B6D496E220B61A5D2ECFC74C50E9C,
 	MenuContainerSlide_Update_m42A3FE2761C8B95FA04511780ADC01B056AABEF5,
@@ -88,6 +98,7 @@ static Il2CppMethodPointer s_methodPointers[45] =
 	U3CswitchToStandardU3Ed__18_System_Collections_IEnumerator_get_Current_mC86F7E8BD9EA46BD2857FE6720B4BBC648C94795,
 	MenuController_Start_m88A8FAF8DB4765830F6CA0D4508D5E565B2F68D0,
 	MenuController_Update_m15DD6714D46E0384A1F59B62B8A6323C108058D6,
+	MenuController_creditsFade_m69849F325341F511585D37998CA711D17551F379,
 	MenuController_OpenAudioSettings_m184660A14F48887AE6874D11CFA6BFDAEF3D7521,
 	MenuController_CheckVolume_mBFEE6D770C1F139E63C52CDFBB40EAE364AF35D8,
 	MenuController_VolumeConfirmApply_mF2EB853BB5B10523490D9A9BBD5AF3E5E1673255,
@@ -95,12 +106,21 @@ static Il2CppMethodPointer s_methodPointers[45] =
 	MenuController_VolumeBack_mA4281A87345FECE9F8FEEF89E021D1FAD835325F,
 	MenuController_VolumeConfirmBack_mCC51D3BC6BBB514F7950328A2CA8E65E0412E3AC,
 	MenuController_VolumeConfirmEd_m7085B5C5BFC7B7F006665822AA85865BA311F704,
+	MenuController_DisplayCredits_m40538620C83849EA024C566BDCD5F81E329BB3F2,
+	MenuController_StartGame_m187D5BCB6C49A8473FDC5D3785713A2B66EAD306,
+	MenuController_EndCredits_m5B016D38A645A666A9DD99665C4FD48C8798087C,
 	MenuController__ctor_m3E178AC64181BB1DB914E825C38F925DDE9C08C1,
-	MenuController_U3CStartU3Eb__7_0_m0AE29106B526EF004113BAB7772FB3F2EA5ACA94,
+	MenuController_U3CStartU3Eb__13_0_m077F45E3D4307D396D19356B0EC29D18A6DC8216,
+	U3CEndCreditsU3Ed__25__ctor_m273AC9D552A47DE41E2FEE7CA5581E9186D92E85,
+	U3CEndCreditsU3Ed__25_System_IDisposable_Dispose_m7A53FCDB6F7FF9EDE14F2DF902B4DAC2AE660F61,
+	U3CEndCreditsU3Ed__25_MoveNext_mA0F72B4D0E9C2B033A9581CAFCCBB4873EACBC9F,
+	U3CEndCreditsU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m56A3012311097DA493D412351DAB2B418177106C,
+	U3CEndCreditsU3Ed__25_System_Collections_IEnumerator_Reset_mA3E2E49FB5470D1FE3BF69431BC651D9B118E9A3,
+	U3CEndCreditsU3Ed__25_System_Collections_IEnumerator_get_Current_m5FD8AD72C2C555CE3CEE59066D8A85C3B06FE317,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[45] = 
+static const int32_t s_InvokerIndices[55] = 
 {
 	12508,
 	12508,
@@ -144,7 +164,17 @@ static const int32_t s_InvokerIndices[45] =
 	12508,
 	12508,
 	12508,
+	12508,
+	12508,
+	12325,
+	12508,
 	9545,
+	9408,
+	12508,
+	12151,
+	12325,
+	12508,
+	12325,
 	21710,
 	12508,
 };
@@ -152,7 +182,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	45,
+	55,
 	s_methodPointers,
 	0,
 	NULL,

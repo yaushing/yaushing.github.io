@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 using TMPro;
 using Unity.VisualScripting;
 using System;
@@ -20,6 +21,14 @@ public class MenuController : MonoBehaviour
     [SerializeField] private TMP_Text _confirmationText;
     [SerializeField] private float _volume;
 
+    [Header("Credits")]
+    [SerializeField] private GameObject _credits;
+    [SerializeField] private VideoPlayer _creditsVideoPlayer;
+    [SerializeField] private string _creditsVideo;
+    [SerializeField] private float _creditsTime;
+    [SerializeField] private CanvasGroup _creditsGroup;
+    [SerializeField] public bool _creditsIn;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,16 +38,32 @@ public class MenuController : MonoBehaviour
         _volumeSlider.value = 0.5f;
         _volumeTextValue.text = _volumeSlider.value.ToString("0%");
         _volume = 0.5f;
+        _creditsGroup.alpha = 0f;
+        _creditsIn = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        creditsFade();
+    }
+
+    void creditsFade() {
+        if (_creditsIn) {
+            if (_creditsGroup.alpha < 1){
+                _creditsGroup.alpha += Time.deltaTime;
+            }
+        }
+        else {
+            if (_creditsGroup.alpha > 0){
+                _creditsGroup.alpha -= Time.deltaTime;
+            }
+        }
     }
 
     public void OpenAudioSettings() {
         _audioSettings.SetActive(true);
+        _creditsIn = false;
         _volumeTextValue.text = _volumeSlider.value.ToString("0%");
     }
 
@@ -78,5 +103,29 @@ public class MenuController : MonoBehaviour
         AudioListener.volume = _volume;
         _volumeSlider.value = _volume;
         PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+    }
+
+    public void DisplayCredits() {
+        if (_creditsIn) {
+            _creditsIn = false;
+            _creditsVideoPlayer.Stop();
+        }
+        else {
+            _creditsIn = true;
+            _creditsVideoPlayer.url = _creditsVideo;
+            _creditsVideoPlayer.isLooping = true;
+            _creditsVideoPlayer.Play();
+            StartCoroutine(EndCredits());
+        }
+    }
+
+    public void StartGame() {
+        _creditsIn = false;
+    }
+
+    IEnumerator EndCredits() {
+        yield return new WaitForSeconds(_creditsTime);
+        _creditsVideoPlayer.Stop();
+        _creditsIn = false;
     }
 }

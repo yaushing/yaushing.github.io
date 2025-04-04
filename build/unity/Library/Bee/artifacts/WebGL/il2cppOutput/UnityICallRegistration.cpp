@@ -6530,6 +6530,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Video.VideoPlayer
 
+		//System.Void UnityEngine.Video.VideoPlayer::Play_Injected(System.IntPtr)
+		void Register_UnityEngine_Video_VideoPlayer_Play_Injected();
+		Register_UnityEngine_Video_VideoPlayer_Play_Injected();
+
+		//System.Void UnityEngine.Video.VideoPlayer::Stop_Injected(System.IntPtr)
+		void Register_UnityEngine_Video_VideoPlayer_Stop_Injected();
+		Register_UnityEngine_Video_VideoPlayer_Stop_Injected();
+
 		//System.Void UnityEngine.Video.VideoPlayer::set_isLooping_Injected(System.IntPtr,System.Boolean)
 		void Register_UnityEngine_Video_VideoPlayer_set_isLooping_Injected();
 		Register_UnityEngine_Video_VideoPlayer_set_isLooping_Injected();
