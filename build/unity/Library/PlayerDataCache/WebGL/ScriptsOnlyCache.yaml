@@ -2132,4 +2132,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartupScene.unity
   - Assets/Scenes/HomeScene.unity
-  playerPath: /Users/ysk/Projects/yaushing.github.io/0.0.02
+  playerPath: /Users/ysk/Projects/yaushing.github.io/game
