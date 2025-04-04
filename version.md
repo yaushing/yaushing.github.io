@@ -1,6 +1,6 @@
 | Date | Game Version | Website Version | Changes |
 | :--: | :----------: | :-------------: | :------ |
-| 04 April 2025 | v0.3.3 | v.1.2.2 | 
+| 04 April 2025 | v0.3.4 | v1.2.3 | Adds displaying versioning on all screens
 | | | v1.2.2 | - Fixed bug where forcing load results in Error 404
 | | | v1.2.1 | - Fixed bug where users don't get prompted to change orientation
 | | | | - Added todo list

@@ -27,6 +27,23 @@
         window.addEventListener("orientationchange",  (event) => switchScreen())
         window.addEventListener("resize",  (event) => switchScreen())
     </script>
+    <style>
+      #unity-versions {
+        position: fixed;
+        text-align: center;
+        color: white;
+        padding-top: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        bottom: calc(30/1080 * 100lvh);
+        width: 100%;
+      }
+      #unity-versions > div {
+        padding: 8px
+      }
+    </style>
 </head>
 <!-- To remove each build - -->
 <body>
@@ -37,12 +54,12 @@
       <div id="unity-progress-bar-empty">
         <div id="unity-progress-bar-full"></div>
       </div>
-      <div id="unity-versions">
-        <div id="website-version">v1.5.2</div>
-        <div id="game-version">v0.0.3</div>
-      </div>
     </div>
     <div id="unity-warning"> </div>
+    <div id="unity-versions">
+      <div id="website-version">Website v1.2.3</div>
+      <div id="game-version">Game v0.3.4</div>
+    </div>
     <!--
     <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
