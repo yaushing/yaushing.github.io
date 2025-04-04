@@ -4,6 +4,10 @@
 
 A personal website to introduce myself, powered by Unity and WebGL, for purposes including but not limited to DSA.
 
+```
+WARNING: VULNERABILITY OF GAME v0.3.2, WEBSITE v1.1.0 FOR HTTP LOADING
+```
+
 ## Authors
 
 - [@JKYS_11257](https://www.github.com/yaushing)

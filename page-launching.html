@@ -20,11 +20,7 @@
         }
         const switchScreen = () => {
           if (screen.width <= screen.height) {
-            if (canLoad()) {
-              window.location.href = "./page-rotate.html";
-            } else {
-              window.location.href = "./page-resolution.html";
-            }
+            window.location.href = "./page-rotate.html";
           }
         }
         window.addEventListener('load', (event) => switchScreen())
@@ -40,6 +36,10 @@
       <div id="unity-logo"></div>
       <div id="unity-progress-bar-empty">
         <div id="unity-progress-bar-full"></div>
+      </div>
+      <div id="unity-versions">
+        <div id="website-version">v1.5.2</div>
+        <div id="game-version">v0.0.3</div>
       </div>
     </div>
     <div id="unity-warning"> </div>
