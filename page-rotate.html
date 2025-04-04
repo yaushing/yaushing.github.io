@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:site_name" content="KYS | Home" />
+    <meta property="og:locale" content="en_SG" />
+    <meta property="article:author" content="https://yaushing.github.io" />
+    <link rel="icon" href="assets/images/favicon.png" />
+    <title>KYS | Home</title>
+    <script>
+        const canLoad = () => {
+        if (Math.max(screen.width, screen.height) / Math.min(screen.width, screen.height) > 2) {
+            return false;
+        } 
+            return true;
+        }
+        const switchScreen = () => {
+            console.log(canLoad());
+            if (screen.width >= screen.height) {
+                if (canLoad()) {
+                    window.location.href = "./page-launching.html";
+                } else {
+                    window.location.href = "./page-resolution.html";
+                }
+            }
+        }
+        window.addEventListener('load', (event) => switchScreen())
+        window.addEventListener("orientationchange",  (event) => switchScreen())
+        window.addEventListener("resize",  (event) => switchScreen())
+    </script>
+</head>
+<body style = "background-color: black; padding: 0; margin: 0;">
+    <div style="display: flex; flex-direction: column; justify-content: center; height: 100lvh;">
+        <video autoplay loop muted style="width: 100vw; height: 100lvh; align-self: center;">
+            <source src="assets/videos/rotate.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+</html>

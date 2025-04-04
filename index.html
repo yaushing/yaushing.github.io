@@ -10,10 +10,20 @@
     <link rel="icon" href="assets/images/favicon.png" />
     <title>KYS | Home</title>
     <script>
-        if (screen.width <= screen.height) {
-            window.location.href = "./rotate.html";
+        const canLoad = () => {
+            if (Math.max(screen.width, screen.height) / Math.min(screen.width, screen.height) > 2) {
+                return false;
+            }
+            return true;
+        }
+        if (screen.width >= screen.height) {
+            if (canLoad()) {
+                window.location.href = "./page-launching.html";
+            } else {
+                window.location.href = "./page-resolution.html";
+        }
         } else {
-            window.location.href = "./launching.html";
+            window.location.href = "./page-rotate.html";
         }
     </script>
 </head>

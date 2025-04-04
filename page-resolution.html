@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:site_name" content="KYS | Home" />
+    <meta property="og:locale" content="en_SG" />
+    <meta property="article:author" content="https://yaushing.github.io" />
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+    <title>KYS | Home</title>
+    <script>
+        const canLoad = () => {
+            if (Math.max(screen.width, screen.height) / Math.min(screen.width, screen.height) > 2) {
+                return false;
+            } 
+            return true;
+        }
+        const switchScreen = () => {
+            if (canLoad()) {
+                window.location.href = "./index.html";
+            }
+        }
+        window.addEventListener('load', (event) => switchScreen())
+        window.addEventListener("orientationchange",  (event) => switchScreen())
+        window.addEventListener("resize",  (event) => switchScreen())
+    </script>
+</head>
+<body style = "background-color: white; padding: 0; margin: 0;">
+    <div style = "display: flex; flex-direction: column; height: 100lvh; justify-content: center; align-items: center; padding: 10px;">
+        <p style = "font-size: larger; font-family:'Courier New', Courier, monospace; text-align: center;">
+            WARNING!
+        </p>
+        <p style = "font-size: large; font-family:'Courier New', Courier, monospace; text-align: center;">
+            Your device's resolution is not native supported. Please use a device with a standard resolution, like 1920x1080, 2540x1440, .etc. Alternatively, you can press the button below to force the game to load in a cropped mode. However, this is highly experimental and may not work as expected. <br>
+        </p>
+        <div class='btn btn-danger' onclick="window.location.href='page-launching-adjusted.html'">Force game load</div>
+    </div>
+</body>
+</html>
