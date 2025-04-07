@@ -20,6 +20,8 @@
         const switchScreen = () => {
             if (canLoad()) {
                 window.location.href = "./index.html";
+            } else if (screen.height >= screen.width) {
+                window.location.href = "./page-rotate.html";
             }
         }
         window.addEventListener('load', (event) => switchScreen())

@@ -1,5 +1,6 @@
 | Date | Game Version | Website Version | Changes |
 | :--: | :----------: | :-------------: | :------ |
+| 07 April 2025 | v0.4.0 | v1.4.0 | - Added orientation bias to the resolution part
 | 04 April 2025 | v0.4.0 | v1.3.0 | - Added credits
 | | | v1.3.0 | - Adds displaying versioning on all screens
 | | | v1.2.2 | - Fixed bug where forcing load results in Error 404
