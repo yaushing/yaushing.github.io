@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <title>KYS | Home</title>
     <script>
+        const getMobileOS = () => {
+        const ua = navigator.userAgent
+        if (/android/i.test(ua)) {
+            return "Android"
+        }
+        else if (/iPad|iPhone|iPod/.test(ua)) {
+            return "iOS"
+        }
+            return "Other"
+        }
         const canLoad = () => {
           if (Math.max(screen.width, screen.height) / Math.min(screen.width, screen.height) > 2) {
             return false;
@@ -19,12 +29,14 @@
           return true;
         }
         const switchScreen = () => {
-          if (screen.width <= screen.height) {
+          if (getMobileOS() === "iOS") {
+            window.location.href = "./page-403.html";
+          } else if (screen.width <= screen.height) {
             window.location.href = "./page-rotate.html";
           }
         }
-        //window.addEventListener('load', (event) => switchScreen())
-        //window.addEventListener("orientationchange",  (event) => switchScreen())
+        window.addEventListener('load', (event) => switchScreen())
+        window.addEventListener("orientationchange",  (event) => switchScreen())
         window.addEventListener("resize",  (event) => switchScreen())
     </script>
     <style>

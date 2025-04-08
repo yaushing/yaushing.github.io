@@ -11,6 +11,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <title>KYS | Home</title>
     <script>
+        const getMobileOS = () => {
+        const ua = navigator.userAgent
+        if (/android/i.test(ua)) {
+            return "Android"
+        }
+        else if (/iPad|iPhone|iPod/.test(ua)) {
+            return "iOS"
+        }
+            return "Other"
+        }
         const canLoad = () => {
             if (Math.max(screen.width, screen.height) / Math.min(screen.width, screen.height) > 2) {
                 return false;
@@ -18,7 +28,9 @@
             return true;
         }
         const switchScreen = () => {
-            if (canLoad()) {
+            if (getMobileOS() === "iOS") {
+                window.location.href = "./page-403.html"
+            } else if (canLoad()) {
                 window.location.href = "./index.html";
             } else if (screen.height >= screen.width) {
                 window.location.href = "./page-rotate.html";
