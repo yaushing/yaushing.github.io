@@ -1,5 +1,6 @@
 | Date | Game Version | Website Version | Changes |
 | :--: | :----------: | :-------------: | :------ |
+| 08 April 2025 | v0.5.0 (Still hosting v0.4.0) | v1.4.0 | - Added semi object-oriented modules to the home pages
 | 07 April 2025 | v0.4.0 | v1.4.0 | - Added orientation bias to the resolution part
 | 04 April 2025 | v0.4.0 | v1.3.0 | - Added credits
 | | | v1.3.0 | - Adds displaying versioning on all screens

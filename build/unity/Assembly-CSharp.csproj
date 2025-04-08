@@ -49,6 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Scripts/MenuController.cs" />
+    <Compile Include="Assets/Scripts/PagesFadeInOut.cs" />
+    <Compile Include="Assets/Scripts/BodyFocusFadeInOut.cs" />
+    <Compile Include="Assets/Scripts/Focus3DObjectSpin.cs" />
+    <Compile Include="Assets/Scripts/BodyTextController.cs" />
     <Compile Include="Assets/Scripts/MenuContainerSlide.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1199,6 +1203,10 @@
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
