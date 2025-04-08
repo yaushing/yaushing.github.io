@@ -28,7 +28,6 @@
             return true;
         }
         const switchScreen = () => {
-            document.documentElement.requestFullscreen().then(() => screen.orientation.lock("landscape"));
             if (canLoad()) {
                 window.location.href = "./index.html";
             } else if (screen.height >= screen.width) {
