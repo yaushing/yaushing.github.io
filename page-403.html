@@ -28,9 +28,8 @@
             return true;
         }
         const switchScreen = () => {
-            if (getMobileOS() === "iOS") {
-                window.location.href = "./page-403.html"
-            } else if (canLoad()) {
+            document.documentElement.requestFullscreen().then(() => screen.orientation.lock("landscape"));
+            if (canLoad()) {
                 window.location.href = "./index.html";
             } else if (screen.height >= screen.width) {
                 window.location.href = "./page-rotate.html";
