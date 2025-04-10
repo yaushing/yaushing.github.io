@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -16,6 +18,9 @@ public class BodyTextController : MonoBehaviour
     [SerializeField] private VideoPlayer _backgroundVideo;
     [SerializeField] private MeshRenderer _focus3DMeshRenderer;
     [SerializeField] private MeshFilter _focus3DMeshFilter;
+    [SerializeField] private GameObject _focus3DObject;
+    [SerializeField] private float _fadeSpeed = 2f;
+    [SerializeField] private bool _fadeIn;
     [SerializeField] private int[] _focusPageLengths;
 
     [Header("Data for all focuses")]
@@ -41,6 +46,7 @@ public class BodyTextController : MonoBehaviour
     [SerializeField] private Mesh[] _focusMesh2;
 
     public void firstFocus() {
+        _fadeIn = true;
         _focus = 0;
         _focusPage = 0;
         _backgroundVideo.url = _focusBackgroundVideos[0];
@@ -50,9 +56,56 @@ public class BodyTextController : MonoBehaviour
         _focus3DMeshFilter.mesh = _focusMesh[0];
         _focus3DMeshRenderer.material = _focusMaterial[0];
     }
+
+    public void secondFocus() {
+        _fadeIn = true;
+        _focus = 1;
+        _focusPage = 0;
+        _backgroundVideo.url = _focusBackgroundVideos[1];
+        _titleObject.text = _focusTitles[1];
+        _subTitleObject.text = _focusSubTitles1[0];
+        _textObject.text = _focusBodies1[0];
+        _focus3DMeshFilter.mesh = _focusMesh1[0];
+        _focus3DMeshRenderer.material = _focusMaterial1[0];
+    }
+
+    public void thirdFocus() {
+        _fadeIn = true;
+        _focus = 2;
+        _focusPage = 0;
+        _backgroundVideo.url = _focusBackgroundVideos[2];
+        _titleObject.text = _focusTitles[2];
+        _subTitleObject.text = _focusSubTitles2[0];
+        _textObject.text = _focusBodies2[0];
+        _focus3DMeshFilter.mesh = _focusMesh2[0];
+        _focus3DMeshRenderer.material = _focusMaterial2[0];
+    }
+
+    public void prevPage() {
+        StartCoroutine(FadeInOut(-1));
+    }
+
     public void nextPage() {
-        _focusPage += 1;
+        StartCoroutine(FadeInOut(1));
+    }
+
+    public void quitFocus() {
+        _focus = 0;
+        _fadeIn = false;
+        StartCoroutine(FadeOut());
+    }
+
+    IEnumerator FadeOut() {
+        yield return new WaitForSeconds(0.5f);
+        _focus3DObject.SetActive(false);
+    }
+
+    IEnumerator FadeInOut(int inc) {
+        _fadeIn = false;
+        yield return new WaitForSeconds(0.5f);
+        _focusPage += inc;
         if (_focusPage >= _focusPageLengths[_focus]) {_focusPage = 0;}
+        else if (_focusPage < 0) {_focusPage = _focusPageLengths[_focus] - 1;}
         if (_focus == 0) {
             _subTitleObject.text = _focusSubTitles[_focusPage];
             _textObject.text = _focusBodies[_focusPage];
@@ -69,16 +122,10 @@ public class BodyTextController : MonoBehaviour
             _focus3DMeshFilter.mesh = _focusMesh2[_focusPage];
             _focus3DMeshRenderer.material = _focusMaterial2[_focusPage];
         }
-    }
-    public void prevPage() {
-        _focus = 0;
-        _focusPage = 0;
-        _backgroundVideo.url = _focusBackgroundVideos[0];
-        _titleObject.text = _focusTitles[0];
-        _subTitleObject.text = _focusSubTitles[0];
-        _textObject.text = _focusBodies[0];
-        _focus3DMeshFilter.mesh = _focusMesh[0];
-        _focus3DMeshRenderer.material = _focusMaterial[0];
+        Color tempColor = _focus3DMeshRenderer.material.color;
+        tempColor.a = 0;
+        _focus3DMeshRenderer.material.color = tempColor;
+        _fadeIn = true;
     }
 
     void Start()
@@ -89,6 +136,23 @@ public class BodyTextController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_fadeIn) {
+            if (!_focus3DObject.activeSelf) {
+                _focus3DObject.SetActive(true);
+            }
+            if (_focus3DMeshRenderer.material.color.a < 1) {
+                Color tempColor = _focus3DMeshRenderer.material.color;
+                tempColor.a += Time.deltaTime * _fadeSpeed;
+                _focus3DMeshRenderer.material.color = tempColor;                
+            }
+        } else {
+            if (_focus3DMeshRenderer.material.color.a > 0) {
+                Color tempColor = _focus3DMeshRenderer.material.color;
+                tempColor.a -= Time.deltaTime * _fadeSpeed;
+                _focus3DMeshRenderer.material.color = tempColor;                
+            } else if (_focus3DObject.activeSelf) {
+                _focus3DObject.SetActive(false);
+            }
+        }
     }
 }
