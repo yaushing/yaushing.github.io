@@ -18,8 +18,12 @@ public class MenuContainerSlide : MonoBehaviour
     [SerializeField] private string standardClip;
     [SerializeField] private string exitClip;
     [SerializeField] private float startupTiming;
-    [SerializeField] private float standardTiming;
     [SerializeField] private float exitTiming;
+    [Header("Standard Loop")]
+    [SerializeField] private float standardClip1Length;
+    [SerializeField] private float standardClip2Length;
+    [SerializeField] private float standardClip3Length;
+    [SerializeField] private float standardClip4Length;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -62,7 +66,25 @@ public class MenuContainerSlide : MonoBehaviour
 
     IEnumerator switchToEnd() {
         while (true) {
-            yield return new WaitForSeconds(standardTiming);
+            yield return new WaitForSeconds(standardClip1Length);
+            if (endMovie) {
+                backgroundVid.url = exitClip;
+                backgroundVid.isLooping = false;
+                break;
+            }
+            yield return new WaitForSeconds(standardClip2Length);
+            if (endMovie) {
+                backgroundVid.url = exitClip;
+                backgroundVid.isLooping = false;
+                break;
+            }
+            yield return new WaitForSeconds(standardClip3Length);
+            if (endMovie) {
+                backgroundVid.url = exitClip;
+                backgroundVid.isLooping = false;
+                break;
+            }
+            yield return new WaitForSeconds(standardClip4Length);
             if (endMovie) {
                 backgroundVid.url = exitClip;
                 backgroundVid.isLooping = false;

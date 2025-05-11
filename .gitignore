@@ -1,2 +1,4 @@
 build/blender/extensions/*.zip
 .DS_Store
+build/fusion2unity bridge/*
+build/blender/*

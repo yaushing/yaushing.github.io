@@ -5,10 +5,10 @@ for root, dirs, files in os.walk(".", topdown=False):
         if '.git' in root:
             continue
         elif os.path.getsize(os.path.join(root, name)) > 100000000:
-            #print(os.path.join(root, name), name)
+            print(os.path.join(root, name))
             pass
         if '.blend1' in name:
             remove.append(os.path.join(root, name))
 for file in remove:
     print(file)
-    os.system(f"rm {os.path.join(root, name)[2:]}")
+    os.system(f"rm {file[2:]}")

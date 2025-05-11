@@ -53,6 +53,8 @@
     <Compile Include="Assets/Scripts/BodyFocusFadeInOut.cs" />
     <Compile Include="Assets/Scripts/Focus3DObjectSpin.cs" />
     <Compile Include="Assets/Scripts/BodyTextController.cs" />
+    <Compile Include="Assets/Scripts/NavbarSlideInOut.cs" />
+    <Compile Include="Assets/Scripts/MouseIsHoveringOver.cs" />
     <Compile Include="Assets/Scripts/MenuContainerSlide.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,8 +64,10 @@
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+    <None Include="Assets/TextMesh Pro/Fonts/FiraCode-Regular - OFL.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl" />
+    <None Include="Assets/TextMesh Pro/Fonts/Orbitron - OFL.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />

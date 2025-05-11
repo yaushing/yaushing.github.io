@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ysk/Projects/backup/build/unity/Assembly-CSharp.csproj",
+      "projectUniqueName": "/Users/ysk/Projects/yaushing.github.io/build/unity/Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "/Users/ysk/Projects/backup/build/unity/Assembly-CSharp.csproj",
+      "projectPath": "/Users/ysk/Projects/yaushing.github.io/build/unity/Assembly-CSharp.csproj",
       "packagesPath": "/Users/ysk/.nuget/packages/",
-      "outputPath": "/Users/ysk/Projects/backup/build/unity/Temp/obj/Assembly-CSharp/",
+      "outputPath": "/Users/ysk/Projects/yaushing.github.io/build/unity/Temp/obj/Assembly-CSharp/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ysk/.nuget/NuGet/NuGet.Config"

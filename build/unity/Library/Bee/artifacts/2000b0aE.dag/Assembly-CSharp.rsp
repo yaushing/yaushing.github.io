@@ -410,6 +410,8 @@
 "Assets/Scripts/Focus3DObjectSpin.cs"
 "Assets/Scripts/MenuContainerSlide.cs"
 "Assets/Scripts/MenuController.cs"
+"Assets/Scripts/MouseIsHoveringOver.cs"
+"Assets/Scripts/NavbarSlideInOut.cs"
 "Assets/Scripts/PagesFadeInOut.cs"
 -langversion:9.0
 /deterministic
