@@ -12,6 +12,62 @@
 .body-text {
     font-size: 25px;
 }
+.carousel-indicators-self {
+    opacity: 1 !important;
+    width: 100lvw;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+.btn-carousel {
+    background: gray;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.btn-carousel:hover {
+    background: darkgray;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.carousel-left {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.carousel-right {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.carousel-dots {
+    grid-column: 2;
+    grid-row: 1;
+}
 
 .grid-item-body>a {
     text-decoration: underline;
@@ -92,12 +148,12 @@
 }
 
 .grid-container {
-    height: calc(100lvh - 50px);
+    height: calc(100lvh - 100px);
     display: grid;
 }
 
 .grid-container-overlay-container {
-    height: calc(100lvh - 50px);
+    height: calc(100lvh - 100px);
     position: absolute;
     overflow: hidden;
     width: 100lvw;
@@ -189,14 +245,14 @@
 
     .grid-item-image-image-inside-container {
         opacity: 1;
-        width: calc(45lvw - 60px);
+        width: calc(45lvw - 110px);
         object-fit: cover;
         border-radius: 25px;
     }
 
     .grid-item-image-image-container {
         overflow: hidden;
-        height: calc(100lvh - 130px);
+        height: calc(100lvh - 180px);
         display:flex;
         padding:20px;
     }
@@ -247,13 +303,16 @@
     }
 
     .grid-item-body {
-        overflow: hidden;
+        overflow: scroll;
         font-size: min(5.5vw, 25px) !important;
+        grid-row: 2 !important;
+        height: fit-content;
+        max-height: 75lvh;
     }
 
     .grid-container {
         grid-template-columns: 1fr;
-        height: calc(calc(100lvh - 50px) / 1);
+        height: calc(calc(100lvh - 100px) / 1);
     }
 
     .grid-item-image-caption {
@@ -279,11 +338,12 @@
         display: grid;
         grid-column: 1;
         grid-row: 1 / span 4;
+        height: 100lvh;
         grid-template-columns: 1fr;
         border: none;
         padding: 0px;
         margin: 0px;
-        z-index: 1;
+        z-index: -1000;
         font-size: 30px;
         text-align: center;
         overflow: hidden;

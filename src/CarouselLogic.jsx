@@ -29,10 +29,18 @@ export default function CarouselInstance({ items, interval = 5000, autoPlay = fa
                     {items[index]}
                 </motion.div>
             </AnimatePresence>
-
-            <div className="carousel-controls">
-                <button onClick={prev}>⟨</button>
-                <button onClick={next}>⟩</button>
+            <div className="carousel-indicators-self">
+                <button className="btn carousel-left btn-carousel" onClick={prev}>⟨</button>
+                <button className="btn carousel-right btn-carousel" onClick={next}>⟩</button>
+                <div className="carousel-dots">
+                    {items.map((_, i) => (
+                        <button
+                            key={i}
+                            className={i === index ? "dot active" : "dot"}
+                            onClick={() => goToIndex(i)}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

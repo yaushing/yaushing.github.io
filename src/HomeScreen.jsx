@@ -83,13 +83,13 @@ function HomeScreen() {
                                         <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                                     </div>
                                     <div className="grid-item grid-item-body body-text">
-                                        Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</div>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</div>, 30m (99ft), and with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</div>, 12m (40ft).
+                                        From young, I was interested in archery, from the "cool archers" on TV. After starting a few years ago and all three major disciplines (see left and right pages for details), I quickly fell in love with it, but primarily for the physics behind how the bow works, from conundrums such as the archer's paradox to the complicated kinematics of gears and pulleys of a compound bow. 
                                     </div>
                                 </div>,
                                 <div id="archery" className="grid-container grid-left">
                                     <div className="grid-item grid-item-title">
                                         <p>
-                                            <strong>Traditional <i className="fa-solid fa-bullseye"></i></strong>
+                                            <strong>The Traditional Bow</strong>
                                         </p>
                                         </div>
                                     <div className="grid-item grid-item-image">
@@ -105,7 +105,51 @@ function HomeScreen() {
                                         <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                                     </div>
                                     <div className="grid-item grid-item-body body-text">
-                                        Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</div>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</div>, 30m (99ft), and with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</div>, 12m (40ft).
+                                        This is the oldest, most simple bow, often called by others as simply 'a stick with a a string across it'. This bow is the source of the age-old “Archer's Paradox”: Arrows are mounted at an angle off to the side, instead of directly forwards - yet, arrows travel forward instead of off to the side. Why? The  answer is that due to the difference in weight of the tip and the shaft, arrows bend when shot, and its rotation will cause it to stabilise in flight, much like a gyroscope. A more in-depth explanation can be found <a href="https://en.wikipedia.org/wiki/Archer%27s_paradox" target="_blank" rel="norefferer">here</a>.
+                                    </div>
+                                </div>,
+                                <div id="archery" className="grid-container grid-left">
+                                    <div className="grid-item grid-item-title">
+                                        <p>
+                                            <strong>The Modern Recurve</strong>
+                                        </p>
+                                        </div>
+                                    <div className="grid-item grid-item-image">
+                                        <div className="image-overlay"></div>
+                                        <div className="grid-item-image-container">
+                                            <div className="grid-item-image-image-container"> 
+                                                <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                            </div>
+                                            <p className="grid-item-image-caption">
+                                                Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                            </p>
+                                        </div>
+                                        <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                                    </div>
+                                    <div className="grid-item grid-item-body body-text">
+                                        The most popular bow now in modern days, this is the bow used in Olympic archery and the majority of mainstream archery competitions. It has numerous upgrades from a traditional bow. Arrows can be mounted forward straight through the bow, stopping the “Archer's Paradox”. A stabiliser is added to reduce recoil and move the center of gravity nearer to the hand, a red dot sight for easier target acquisition, and other gizmos to perfect consistency and accuracy — a blend of the physics of a traditional bow and modern mechanics.
+                                    </div>
+                                </div>,
+                                <div id="archery" className="grid-container grid-left">
+                                    <div className="grid-item grid-item-title">
+                                        <p>
+                                            <strong>The Modern Recurve</strong>
+                                        </p>
+                                        </div>
+                                    <div className="grid-item grid-item-image">
+                                        <div className="image-overlay"></div>
+                                        <div className="grid-item-image-container">
+                                            <div className="grid-item-image-image-container"> 
+                                                <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                            </div>
+                                            <p className="grid-item-image-caption">
+                                                Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                            </p>
+                                        </div>
+                                        <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                                    </div>
+                                    <div className="grid-item grid-item-body body-text">
+                                        If the Modern Recurve and high-tech physics had a baby, it would be the Compound bow, whose mechanics and physics could be an entire doctorate's research paper on kinematics. Adorned with pulleys, gears, and a plethora of other gizmos, this bow is the most advanced kind of bow in the world. After pulling the the string back, the force drawn will decrease, and after a certain point, the force will spike up to the point where the archer can't pull past it. Often equiped with a magnification scope, glow sights, stabilisers and <strong>even a rangefinder</strong>, the accuracy one can get with this bow is astounding. However, due to the way the bow works, the tension on the string does not act at all to counteract gravity, so the bow will feel much, much heavier compared to other bows when at a full draw.
                                     </div>
                                 </div>
                             ]}
