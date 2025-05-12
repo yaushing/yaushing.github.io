@@ -9,9 +9,12 @@ import arrowGif from './assets/home/images/arrow.gif';
 import compound from './assets/home/images/compound.jpg'
 import trad from './assets/home/images/traditional.jpg';
 import sfacpdf from './assets/home/pdfs/sfac.pdf'
+import CarouselInstance from './CarouselLogic';
 import './assets/css/style.css';
 function HomeScreen() {
     const vw = document.documentElement.clientHeight;
+    const sections = 3;
+
     const scrollOne = () => {
         window.scrollBy(
             {
@@ -59,36 +62,60 @@ function HomeScreen() {
                     </div>
                 </div>
             </div>
-            <div id="archery" className="grid-container grid-left">
-                <div className="grid-container-overlay-container">
-                    <img alt="Arrow flying across screen" className="grid-container-overlay" src={arrowGif}/>
-                </div>
-                <div className="grid-item grid-item-title">
-                    <p>
-                        <strong>I'm an archer <i className="fa-solid fa-bullseye"></i></strong>
-                    </p>
-                    </div>
-                <div className="grid-item grid-item-image">
-                    <div className="image-overlay"></div>
-                    <div className="grid-item-image-container">
-                        <div className="grid-item-image-image-container"> 
-                            <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
-                        </div>
-                        <p className="grid-item-image-caption">
-                            Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
-                        </p>
-                    </div>
-                    <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
-                </div>
-                <div className="grid-item grid-item-body body-text">
-                    Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</div>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</div>, 30m (99ft), and with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</div>, 12m (40ft).
-                </div>
-            </div>
+            <CarouselInstance
+                            items={[
+                                <div id="archery" className="grid-container grid-left">
+                                    <div className="grid-item grid-item-title">
+                                        <p>
+                                            <strong>Archery <i className="fa-solid fa-bullseye"></i></strong>
+                                        </p>
+                                        </div>
+                                    <div className="grid-item grid-item-image">
+                                        <div className="image-overlay"></div>
+                                        <div className="grid-item-image-container">
+                                            <div className="grid-item-image-image-container"> 
+                                                <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                            </div>
+                                            <p className="grid-item-image-caption">
+                                                Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                            </p>
+                                        </div>
+                                        <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                                    </div>
+                                    <div className="grid-item grid-item-body body-text">
+                                        Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</div>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</div>, 30m (99ft), and with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</div>, 12m (40ft).
+                                    </div>
+                                </div>,
+                                <div id="archery" className="grid-container grid-left">
+                                    <div className="grid-item grid-item-title">
+                                        <p>
+                                            <strong>Traditional <i className="fa-solid fa-bullseye"></i></strong>
+                                        </p>
+                                        </div>
+                                    <div className="grid-item grid-item-image">
+                                        <div className="image-overlay"></div>
+                                        <div className="grid-item-image-container">
+                                            <div className="grid-item-image-image-container"> 
+                                                <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                            </div>
+                                            <p className="grid-item-image-caption">
+                                                Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                            </p>
+                                        </div>
+                                        <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                                    </div>
+                                    <div className="grid-item grid-item-body body-text">
+                                        Although I only started learning in January 2024, I was obsessed with it. Now, I can shoot with all three major disciplines: Compound, Modern Recurve, and Traditional. With the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={modernrecurve} /></div>Modern Recurve</div>, I can consistently land arrows within a circle with a 12cm (4.7in) diameter at 18m (59 ft); with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={compound} /></div>Compound</div>, 30m (99ft), and with the <br /><div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of a modern recurve" src={trad} /></div>Traditional</div>, 12m (40ft).
+                                    </div>
+                                </div>
+                            ]}
+                            autoplay={false}
+                        />
             <div className = "spacer"><br /><hr /><br /></div>
             <div id="coder" className="grid-container grid-right">
                 <div className="grid-item grid-item-title">
                     <p>
-                        <strong>I'm a coder <i className="fa-solid fa-laptop"></i></strong>
+                        <strong>Coding <i className="fa-solid fa-laptop"></i></strong>
                     </p>
                     </div>
                 <div className="grid-item grid-item-image">
