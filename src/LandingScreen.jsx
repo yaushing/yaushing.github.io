@@ -1,14 +1,8 @@
-import CarouselInstance from "./CarouselLogic";
-
 function LandingScreen() {
     return (
-        <CarouselInstance
-            items={[
-                <div>Hellur</div>,
-                <div>Goodbuy</div>
-            ]}
-            autoplay={false}
-        />
+        <div className='main-content'>
+            <a href="#/home" style={{textAlign:"center"}} className="btn btn-success">Start</a>
+        </div>
     );
 }
 
