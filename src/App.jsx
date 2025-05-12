@@ -1,8 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import HomeScreen from './HomeScreen';
 import LandingScreen from './LandingScreen';
 import ProjectsScreen from './ProjectsScreen';
+import HobbiesScreen from './HobbiesScreen';
 
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/" element={<LandingScreen />} />
-          <Route path="/home" element={<HomeScreen />} />
+          <Route path="/home" element={<HobbiesScreen />} />
           <Route path="/projects" element={<ProjectsScreen />} />
         </Routes>
       </div>
