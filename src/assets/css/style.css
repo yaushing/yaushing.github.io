@@ -1,5 +1,9 @@
 /* GLOBAL */
 
+footer {
+    text-align: center;
+}
+
 .navbar-brand-image {
     height: 50px;
     float: left;

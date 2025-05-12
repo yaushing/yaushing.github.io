@@ -141,7 +141,7 @@ function HobbiesScreen() {
                     <div id="archery" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
                             <p>
-                                <strong>The Modern Recurve</strong>
+                                <strong>The Compound Bow</strong>
                             </p>
                             </div>
                         <div className="grid-item grid-item-image">
@@ -315,7 +315,7 @@ function HobbiesScreen() {
                                     <img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                    3D model of Kaedehara Kazuha, a Genshin Impact character that I was editing for my friend <i className="fa-solid fa-arrow-turn-up"></i>
+                                    3D model of Kaedehara Kazuha from Genshin Impact that I was editing for my friend <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="3D model" className="grid-item-image-image" src={art3d}/>
@@ -362,7 +362,7 @@ function HobbiesScreen() {
                             <img alt="First aid" className="grid-item-image-image-inside-container"/>
                         </div>
                         <p className="grid-item-image-caption">
-                            No caption<i className="fa-solid fa-arrow-turn-up"></i>
+                            Due to privacy reasons of donors and/or casualties, this is intentionally left blank. <i className="fa-solid fa-arrow-turn-up"></i>
                         </p>
                     </div>
                     <img alt="Red Cross" className="grid-item-image-image" />
