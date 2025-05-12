@@ -20,6 +20,11 @@ import artPhys from './assets/home/images/4dart.jpg';
 
 import sfacpdf from './assets/home/pdfs/sfac.pdf'
 import './assets/css/style.css';
+
+import { useGLTF } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber';
+import Model from './modelViewer.jsx';
+
 function HobbiesScreen() {
     const vw = document.documentElement.clientHeight;
 
@@ -104,10 +109,12 @@ function HobbiesScreen() {
                             <div className="image-overlay"></div>
                             <div className="grid-item-image-container">
                                 <div className="grid-item-image-image-container"> 
-                                    <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                    <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
+                                        <Model source="assets/3dModels/traditional-transformed.glb"/>
+                                    </Canvas>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                    Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                    Interactive 3D model of a Traditional Bow <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
@@ -126,10 +133,12 @@ function HobbiesScreen() {
                             <div className="image-overlay"></div>
                             <div className="grid-item-image-container">
                                 <div className="grid-item-image-image-container"> 
-                                    <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                    <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
+                                        <Model source="assets/3dModels/modernRecurve-transformed.glb"/>
+                                    </Canvas>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                    Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                    Interactive 3D model of a Modern Recurve <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
@@ -148,10 +157,12 @@ function HobbiesScreen() {
                             <div className="image-overlay"></div>
                             <div className="grid-item-image-container">
                                 <div className="grid-item-image-image-container"> 
-                                    <img alt="Archery" className="grid-item-image-image-inside-container" src={archery}/>
+                                    <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
+                                        <Model source="assets/3dModels/compound-transformed.glb"/>
+                                    </Canvas>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                    Me shooting my mordern recurve <i className="fa-solid fa-arrow-turn-up"></i>
+                                    Interactive 3D model of a compound bow <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
@@ -374,5 +385,8 @@ function HobbiesScreen() {
         </div>
     );
 }
+useGLTF.preload('/traditional-transformed.glb')
+useGLTF.preload('/traditional-transformed.glb')
+useGLTF.preload('/traditional-transformed.glb')
 
 export default HobbiesScreen;

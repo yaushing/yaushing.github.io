@@ -1,5 +1,9 @@
 /* GLOBAL */
 
+.grid-3d-canvas {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 footer {
     text-align: center;
 }
