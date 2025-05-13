@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import CarouselInstance from './CarouselLogic';
+import Carousel from './CarouselLogic';
 
 import splashBg from './assets/home/images/compound-landscape.jpg';
 import splash from './assets/home/images/hello-splash.gif';
@@ -23,7 +23,7 @@ import './assets/css/style.css';
 
 import { useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber';
-import Model from './modelViewer.jsx';
+import Model from './ModelViewer.jsx';
 
 function HobbiesScreen() {
     const vw = document.documentElement.clientHeight;
@@ -75,7 +75,7 @@ function HobbiesScreen() {
                     </div>
                 </div>
             </div>
-            <CarouselInstance
+            <Carousel
                 items={[
                     <div id="archery" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
@@ -174,7 +174,7 @@ function HobbiesScreen() {
                 ]}
             />
             <div className = "spacer"><br /><hr /><br /></div>
-            <CarouselInstance
+            <Carousel
                 items={[
                     <div id="coder" className="grid-container grid-right">
                         <div className="grid-item grid-item-title">
@@ -289,7 +289,7 @@ function HobbiesScreen() {
                 ]}
             />
             <div className = "spacer"><br /><hr /><br /></div>
-            <CarouselInstance
+            <Carousel
                 items={[
                     <div id="artist" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
@@ -370,7 +370,9 @@ function HobbiesScreen() {
                     <div className="image-overlay"></div>
                     <div className="grid-item-image-container">
                         <div className="grid-item-image-image-container"> 
-                            <img alt="First aid" className="grid-item-image-image-inside-container"/>
+                            <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
+                                <Model source="assets/3dModels/firstaidbox-transformed.glb"/>
+                            </Canvas>
                         </div>
                         <p className="grid-item-image-caption">
                             Due to privacy reasons of donors and/or casualties, this is intentionally left blank. <i className="fa-solid fa-arrow-turn-up"></i>
@@ -385,8 +387,9 @@ function HobbiesScreen() {
         </div>
     );
 }
-useGLTF.preload('/traditional-transformed.glb')
-useGLTF.preload('/compound-transformed.glb')
-useGLTF.preload('/modernRecurve-transformed.glb')
+useGLTF.preload('assets/3dModels/traditional-transformed.glb')
+useGLTF.preload('assets/3dModels/compound-transformed.glb')
+useGLTF.preload('assets/3dModels/modernRecurve-transformed.glb')
+useGLTF.preload('assets/3dModels/firstaidbox-transformed.glb')
 
 export default HobbiesScreen;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function CarouselInstance({ items, interval = 5000, autoPlay = false }) {
+export default function Carousel({ items, interval = 5000, autoPlay = false }) {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
