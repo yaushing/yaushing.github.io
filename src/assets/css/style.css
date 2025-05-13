@@ -479,3 +479,16 @@ footer {
     0% {bottom: 20px}
     100% {bottom:10px}
 }
+
+/* projects page */
+.courseworkGIF {
+    object-fit: contain;
+    height: auto;
+    width: auto !important;
+    max-width: calc(45lvw - 110px) !important;
+}
+
+.courseworkGIFContainer {
+    width: auto;
+    height: auto;
+}

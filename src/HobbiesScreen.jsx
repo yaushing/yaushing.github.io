@@ -14,6 +14,7 @@ import codingPri from './assets/home/images/codingPrimary.png';
 import codingExt1 from './assets/home/images/codingPrimaryExternal.png';
 import codingSec from './assets/home/images/codingSecondary.png';
 import codingExt2 from './assets/home/images/codingSecondaryExternal.png';
+import cyberSecurity from './assets/home/images/cyberSec.png'
 import bd1 from './assets/home/images/bd1.webp';
 
 import art2d from './assets/home/images/2dart.png';
@@ -297,6 +298,28 @@ function HobbiesScreen() {
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             From 2022, after playing the game Star Wars Jedi: Fallen Order, I fell in love with the the protagonist's companion robot, <div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of BD-1" src={bd1} /></div>BD-1</div> - a cute, useful bipedal robot. Hence, I was inspired to build one myself. Yet, since 2023, it's been on an extended hiatus for the simple reason of me not knowing how I was going to go about it. Yet, now, after my experiences in Robotics@Apex and exploring other microcontrollers, and found an <a href="https://github.com/makerforgetech/modular-biped" target="_blank" rel="noreferrer">open-source project</a>, I've restarting that project, using a new Raspberry Pi 5 that I bought. Also, in 2024, I started learning the Unity Game Engine, as well as Unreal Engine. From there, I learnt about game development, as well as the Unity Engine's version of C#.
+                        </div>
+                    </div>,
+                    <div id="coder" className="grid-container grid-right">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>CyberSecurity <i class="fa-solid fa-network-wired"></i></strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="Shhhhh" className="grid-item-image-image-inside-container" src={cyberSecurity}/>
+                                </div>
+                                <p className="grid-item-image-caption">
+                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> The quieter you are, the more you are able to hear...
+                                </p>
+                            </div>
+                            <img alt="Code" className="grid-item-image-image" src={coding}/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            Hacking is a difficult, high-risk, high-return skillset. Who wouldn't want someone who can remotely access and destroy targets without leaving a trace? The white-hat side of it, the CyberSecurity industry, is booming and large - and competitive. Currently, I'm learning RedHatting from TryHackMe and HackTheBox, and I plan to get my Offensive Security Cybersecurity Professional (OSCP) by next year. 
                         </div>
                     </div>
                 ]}
