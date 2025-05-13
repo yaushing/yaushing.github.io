@@ -18,7 +18,7 @@ export default function Model({props, source}) {
 
             {/* Optional: A gentle directional light for subtle depth */}
             <directionalLight 
-                intensity={0.5} 
+                intensity={0.9} 
                 position={[5, 10, 5]} 
                 castShadow 
                 shadow-mapSize-width={1024} 

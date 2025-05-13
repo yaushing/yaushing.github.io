@@ -6,6 +6,8 @@ import splash from './assets/home/images/hello-splash.gif';
 
 import archery from './assets/home/images/archery.jpg';
 import archerycrop from './assets/home/images/archery-crop.jpg';
+import compoundBow from './assets/home/images/compound.jpg';
+import traditionalBow from './assets/home/images/traditional.jpg';
 
 import coding from './assets/home/images/codingMain.jpeg';
 import codingPri from './assets/home/images/codingPrimary.png';
@@ -117,7 +119,7 @@ function HobbiesScreen() {
                                     Interactive 3D model of a Traditional Bow <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
-                            <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                            <img alt="Archery" className="grid-item-image-image" src={traditionalBow}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             This is the oldest, most simple bow, often called by others as simply 'a stick with a a string across it'. This bow is the source of the age-old “Archer's Paradox”: Arrows are mounted at an angle off to the side, instead of directly forwards - yet, arrows travel forward instead of off to the side. Why? The  answer is that due to the difference in weight of the tip and the shaft, arrows bend when shot, and its rotation will cause it to stabilise in flight, much like a gyroscope. A more in-depth explanation can be found <a href="https://en.wikipedia.org/wiki/Archer%27s_paradox" target="_blank" rel="noreferrer">here</a>.
@@ -165,7 +167,7 @@ function HobbiesScreen() {
                                     Interactive 3D model of a compound bow <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
-                            <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
+                            <img alt="Archery" className="grid-item-image-image" src={compoundBow}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             If the Modern Recurve and high-tech physics had a baby, it would be the Compound bow, whose mechanics and physics could be an entire doctorate's research paper on kinematics. Adorned with pulleys, gears, and a plethora of other gizmos, this bow is the most advanced kind of bow in the world. After pulling the the string back, the force drawn will decrease, and after a certain point, the force will spike up to the point where the archer can't pull past it. Often equiped with a magnification scope, glow sights, stabilisers and <strong>even a rangefinder</strong>, the accuracy one can get with this bow is astounding. However, due to the way the bow works, the tension on the string does not act at all to counteract gravity, so the bow will feel much, much heavier compared to other bows when at a full draw.
@@ -307,7 +309,7 @@ function HobbiesScreen() {
                                 Portrait of Nishinoya Yū from Haikyuu I made for a friend <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
-                            <img alt="3D model" className="grid-item-image-image" src={art3d}/>
+                            <img alt="3D model" className="grid-item-image-image" src={art2d}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             Though I am by no means a professional artist, I still know basic anatomy and design, and have used that on 2D art to create some of my own. I mostly draw using Procreate on my iPad, and here's a taster -{'>'} <br/> I can't claim to be as good as my sister, who can draw seemingly photorealistic buildings with just a pen and paper, and I also can't not use a digital software. Still, I'm motivated to keep my skills in it. Yet, I'm more and more unwilling to spend time on 2D art, to focus on the art on the next page...
@@ -323,7 +325,14 @@ function HobbiesScreen() {
                             <div className="image-overlay"></div>
                             <div className="grid-item-image-container">
                                 <div className="grid-item-image-image-container"> 
-                                    <img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>
+                                    {
+                                    /*<img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>*/
+                                    /*
+                                    <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
+                                        <Model source="assets/3dModels/kaedeharaKazuha-transformed.glb"/>
+                                    </Canvas>
+                                    */
+                                    }
                                 </div>
                                 <p className="grid-item-image-caption">
                                     3D model of Kaedehara Kazuha from Genshin Impact that I was editing for my friend <i className="fa-solid fa-arrow-turn-up"></i>
@@ -351,7 +360,7 @@ function HobbiesScreen() {
                                 The model my team of SST and Perse School students made <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
-                            <img alt="3D model" className="grid-item-image-image" src={art3d}/>
+                            <img alt="3D model" className="grid-item-image-image" src={artPhys}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             Moving on to a world of art one can touch and feel, I'm familiar with basic CADing. I was taught onShape in Robotics@Apex, and am in charge of the Open platform in it. As such, I teach my juniors how to use Fusion360, as well as BambuStudio. I myself have a BambuLab P1S at home which I use to relise my imaginations. Under a partnership between SST and the Perse School Cambridge, I was also taught how to use Laser Cutters, and used it to create handheld console for the micro:bit in a project to preserve the finger dexterity of the elderly. 
@@ -375,7 +384,7 @@ function HobbiesScreen() {
                             </Canvas>
                         </div>
                         <p className="grid-item-image-caption">
-                            Due to privacy reasons of donors and/or casualties, this is intentionally left blank. <i className="fa-solid fa-arrow-turn-up"></i>
+                            3D model of a futuristic first aid kit <i className="fa-solid fa-arrow-turn-up"></i>
                         </p>
                     </div>
                     <img alt="Red Cross" className="grid-item-image-image" />
@@ -391,5 +400,6 @@ useGLTF.preload('assets/3dModels/traditional-transformed.glb')
 useGLTF.preload('assets/3dModels/compound-transformed.glb')
 useGLTF.preload('assets/3dModels/modernRecurve-transformed.glb')
 useGLTF.preload('assets/3dModels/firstaidbox-transformed.glb')
+//useGLTF.preload('assets/3dModels/kaedeharaKazuha-transformed.glb')
 
 export default HobbiesScreen;

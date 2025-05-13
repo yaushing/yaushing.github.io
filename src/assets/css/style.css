@@ -47,6 +47,7 @@ footer {
 }
 
 .btn-carousel {
+    z-index: 255;
     background: gray;
     border: none;
     color: white;
@@ -73,6 +74,7 @@ footer {
 }
 
 .carousel-dots {
+    z-index: 255;
     grid-column: 2;
     grid-row: 1;
 }
@@ -359,8 +361,7 @@ footer {
 
     .grid-item-image-image {
         opacity: 1;
-        z-index: 1;
-        height: 100lvh;
+        height: calc(100lvh - 50px);
         width: 100%;
         object-fit: cover;
         background-position: left center;
@@ -372,7 +373,7 @@ footer {
     }
 
     .image-overlay {
-        height: 100%;
+        height: calc(100lvh - 50px);
         width: 100%;
         opacity: 50%;
         z-index: 2;
