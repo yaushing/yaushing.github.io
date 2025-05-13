@@ -34,8 +34,8 @@ function ProjectsScreen() {
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a href="/">Home</a></li>
-                            <li className="active"><a href="./projects">Projects</a></li>
+                            <li><a href="#/about">About Me</a></li>
+                            <li className="active"><a href="#/projects">Projects</a></li>
                         </ul>
                         </div>
                     </div>

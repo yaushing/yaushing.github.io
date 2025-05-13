@@ -6,12 +6,24 @@ export default function Model({props, source}) {
     return (
         <group {...props} dispose={null}>
             <PerspectiveCamera makeDefault={true} far={1000} near={0.1} fov={22.895} position={[19.416, 3.855, 0]} rotation={[-Math.PI / 2, 1.364, Math.PI / 2]} />
-            <spotLight intensity={5000} position={[0, 25, 0]} angle={0.15} penumbra={1} castShadow />
-            <spotLight intensity={5000} position={[0, -25, 0]} angle={0.15} penumbra={1} castShadow />
-            <spotLight intensity={5000} position={[0, 0, 25]} angle={0.15} penumbra={1} castShadow />
-            <spotLight intensity={5000} position={[0, 0, -25]} angle={0.15} penumbra={1} castShadow />
-            <spotLight intensity={5000} position={[25, 0, 0]} angle={0.15} penumbra={1} castShadow />
-            <spotLight intensity={5000} position={[-25, 0, 0]} angle={0.15} penumbra={1} castShadow />
+            <ambientLight intensity={0.7} />
+
+            {/* Hemisphere light to simulate sky and ground lighting */}
+            <hemisphereLight 
+                intensity={0.9} 
+                skyColor="#ffffff" 
+                groundColor="#444444" 
+                position={[0, 50, 0]} 
+            />
+
+            {/* Optional: A gentle directional light for subtle depth */}
+            <directionalLight 
+                intensity={0.5} 
+                position={[5, 10, 5]} 
+                castShadow 
+                shadow-mapSize-width={1024} 
+                shadow-mapSize-height={1024}
+            />
             {Object.keys(nodes).map((key) => {
                 const node = nodes[key]
                 if (node.isMesh) {

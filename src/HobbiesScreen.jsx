@@ -58,7 +58,7 @@ function HobbiesScreen() {
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav navbar-right">
-                            <li className="active"><a href="#/home">Home</a></li>
+                            <li className="active"><a href="#/about">About Me</a></li>
                             <li><a href="#/projects">Projects</a></li>
                         </ul>
                         </div>
@@ -186,7 +186,7 @@ function HobbiesScreen() {
                             <div className="image-overlay"></div>
                             <div className="grid-item-image-container">
                                 <div className="grid-item-image-image-container"> 
-                                    <img alt="Archery" className="grid-item-image-image-inside-container" src={coding}/>
+                                    <img alt="Code" className="grid-item-image-image-inside-container" src={coding}/>
                                 </div>
                                 <p className="grid-item-image-caption">
                                 <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My code for an informatics olympiad question
@@ -214,7 +214,7 @@ function HobbiesScreen() {
                                 <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> Flappy Bird made in Scratch that I made in P6
                                 </p>
                             </div>
-                            <img alt="Scratch" className="grid-item-image-image" src={codingPri}/>
+                            <img alt="Code" className="grid-item-image-image" src={coding}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             This was the first period I started coding in. From the summer camp at Camp Asia, I continued my learning, more and more, until I <em>entered</em> Primary School. There I joined the Info-Comm club, where I learnt coding the BBC Micro:Bit, as well as Minecraft Education Edition. I also learnt how to code the MakeBlock mBot, a small robot which was my first experience in robotics. Furthermore, we explored MIT's AppInventor, and made some apps using it. In P5, I made a <a href="https://replit.com/@JamieYS/Global-warming">website</a> using HTML, CSS and JavaScript for a school project on Climate Change, available on repl.it.
@@ -236,7 +236,7 @@ function HobbiesScreen() {
                                 <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> The website on Climate Change I made in P5
                                 </p>
                             </div>
-                            <img alt="Website screenshot" className="grid-item-image-image" src={codingExt1}/>
+                            <img alt="Code" className="grid-item-image-image" src={coding}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             Primary School was marked by days ending by 1 pm, resulting in <strong>a lot</strong> of free time. I spent a lot of it learning how to code in other manners, such as Python, HTML, CSS, and JavaScript. Using vanilla HTML, CSS and JS, I created my first dsa website hosted <a href="https://yaushing.github.io/dsa" target="_blank" rel="noreferrer">here</a>. As for Python, I went to classes from organisations such as the now-closed First Code Academy, as well as holiday courses from SG Code Campus (which also unfortunately changed the way it runs). Following that, I got my own makeBlock mBot and EV3, and coded those at home in my free time. Furthermore, during the circuit breaker, in my free time, I collaborated with Junior Achievement (JA) and Code.org to help teach the Hour of Code to primary school students remotely, where we taught basic block-based coding.
@@ -258,7 +258,7 @@ function HobbiesScreen() {
                                 <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My group's coursework product - a gamified therapist powered by AI.
                                 </p>
                             </div>
-                            <img alt="Code" className="grid-item-image-image" src={codingSec}/>
+                            <img alt="Code" className="grid-item-image-image" src={coding}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             Secondary School was not a place I had free time in. But it was still a place that I learnt a lot. In S1, I joined SST Inc., where I was taught how to use React.js, SwiftUI, and a bit of Android Studio. I also learnt some C++ for coding in Arduino, using the SSTuino taught to us. Using this, in S2, I made an iPhone app that tracks all the different sports taught at different ActiveSG centers across Singapore, as well as the basics of what each sport was. At the end of the same year, I made an android app that pairs with an arduino that will alert you whenever the noise level in a certain room is too high. By then, I had joined Robotics@Apex, and I spent the first 2 years learning robotics coding using blocks for SPIKE™ Prime, and C++ for VᴱX. In S3, I made a <a href="https://github.com/yaushing/aps" target="_blank" rel="noreferrer">Pure Pursuit controller for a SPIKE™ robot</a>. I also joined the Informatics Society, where I learnt Python and C++ for competitive programming, winning a few Distinctions in some <a href="#/achievements">competitions</a>. In S4, I was introduced to LLMs during a course at Republic Polytechnic, where I learnt LangChain, LangGraph, using ChatGPT's API and more. In Robotics@Apex, I created a <a href="https://github.com/yaushing/py3-qmc5883l" target="_blank" rel="noreferrer">library</a> to use the QMC5883L magnetometer with Python3, updating it for use for my participation in RoboCup Singapore 2025. My best project would be my Computing+ Coursework Project, which details can be found <a href="https://github.com/yaushing/coursework" target="_blank" rel="noreferrer">here</a>.
@@ -280,7 +280,7 @@ function HobbiesScreen() {
                                 <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> I made a pigeon simulator using Unreal Engine once in S2 when I was bored
                                 </p>
                             </div>
-                            <img alt="Pigeon Simulator" className="grid-item-image-image" src={codingExt2}/>
+                            <img alt="Code" className="grid-item-image-image" src={coding}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             From 2022, after playing the game Star Wars Jedi: Fallen Order, I fell in love with the the protagonist's companion robot, <div className="hoverbtn"><div className="hoverbtn-image-container"><img  className="hoverbtn-image" alt="Reference of BD-1" src={bd1} /></div>BD-1</div> - a cute, useful bipedal robot. Hence, I was inspired to build one myself. Yet, since 2023, it's been on an extended hiatus for the simple reason of me not knowing how I was going to go about it. Yet, now, after my experiences in Robotics@Apex and exploring other microcontrollers, and found an <a href="https://github.com/makerforgetech/modular-biped" target="_blank" rel="noreferrer">open-source project</a>, I've restarting that project, using a new Raspberry Pi 5 that I bought. Also, in 2024, I started learning the Unity Game Engine, as well as Unreal Engine. From there, I learnt about game development, as well as the Unity Engine's version of C#.
@@ -307,7 +307,7 @@ function HobbiesScreen() {
                                 Portrait of Nishinoya Yū from Haikyuu I made for a friend <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
-                            <img alt="2D artwork" className="grid-item-image-image" src={art2d}/>
+                            <img alt="3D model" className="grid-item-image-image" src={art3d}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             Though I am by no means a professional artist, I still know basic anatomy and design, and have used that on 2D art to create some of my own. I mostly draw using Procreate on my iPad, and here's a taster -{'>'} <br/> I can't claim to be as good as my sister, who can draw seemingly photorealistic buildings with just a pen and paper, and I also can't not use a digital software. Still, I'm motivated to keep my skills in it. Yet, I'm more and more unwilling to spend time on 2D art, to focus on the art on the next page...
@@ -351,7 +351,7 @@ function HobbiesScreen() {
                                 The model my team of SST and Perse School students made <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
-                            <img alt="Physical model" className="grid-item-image-image" src={artPhys}/>
+                            <img alt="3D model" className="grid-item-image-image" src={art3d}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
                             Moving on to a world of art one can touch and feel, I'm familiar with basic CADing. I was taught onShape in Robotics@Apex, and am in charge of the Open platform in it. As such, I teach my juniors how to use Fusion360, as well as BambuStudio. I myself have a BambuLab P1S at home which I use to relise my imaginations. Under a partnership between SST and the Perse School Cambridge, I was also taught how to use Laser Cutters, and used it to create handheld console for the micro:bit in a project to preserve the finger dexterity of the elderly. 
@@ -386,7 +386,7 @@ function HobbiesScreen() {
     );
 }
 useGLTF.preload('/traditional-transformed.glb')
-useGLTF.preload('/traditional-transformed.glb')
-useGLTF.preload('/traditional-transformed.glb')
+useGLTF.preload('/compound-transformed.glb')
+useGLTF.preload('/modernRecurve-transformed.glb')
 
 export default HobbiesScreen;
