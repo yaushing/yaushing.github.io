@@ -106,6 +106,33 @@ footer {
     background-color: black;
 }
 
+.grid-item-image-caption>a {
+    text-decoration: underline;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0 0 0 0;
+    color: inherit;    
+    transition: background-color .5s ease-in-out, color .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.grid-item-image-caption>a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.grid-item-image-caption>a:hover {
+    text-decoration: underline;
+    background-color: darkgray;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, padding .5s ease-in-out;
+}
+
+.grid-item-image-caption>a:active {
+    background-color: black;
+}
+
 .hoverbtn {
     display: inline;
     text-decoration: underline;
@@ -255,7 +282,7 @@ footer {
 
     .grid-item-image-image-inside-container {
         opacity: 1;
-        width: calc(45lvw - 110px);
+        width: calc(45lvw - 110px) !important;
         object-fit: cover;
         border-radius: 25px;
     }

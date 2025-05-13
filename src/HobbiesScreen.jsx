@@ -26,9 +26,19 @@ import './assets/css/style.css';
 import { useGLTF } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber';
 import Model from './ModelViewer.jsx';
+import { useState } from 'react';
 
 function HobbiesScreen() {
     const vw = document.documentElement.clientHeight;
+    const [show3DKazuha, switchShow3DKazuha] = useState(true);
+
+    const toggleShow3DKazuha = () => {
+        if (show3DKazuha) {
+            switchShow3DKazuha(false);
+        } else {
+            switchShow3DKazuha(true);
+        }
+    }
 
     const scrollOne = () => {
         window.scrollBy(
@@ -62,6 +72,7 @@ function HobbiesScreen() {
                         <ul className="nav navbar-nav navbar-right">
                             <li className="active"><a href="#/about">About Me</a></li>
                             <li><a href="#/projects">Projects</a></li>
+                            <li><a href="#/achievements">Achievements</a></li>
                         </ul>
                         </div>
                     </div>
@@ -326,17 +337,17 @@ function HobbiesScreen() {
                             <div className="grid-item-image-container">
                                 <div className="grid-item-image-image-container"> 
                                     {
-                                    /*<img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>*/
-                                    /*
-                                    <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
-                                        <Model source="assets/3dModels/kaedeharaKazuha-transformed.glb"/>
-                                    </Canvas>
-                                    */
+                                    show3DKazuha?<Canvas className="grid-item-image-image-inside-container grid-3d-canvas"><Model source="assets/3dModels/kazuha-transformed.glb"/></Canvas>:<img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>
                                     }
                                 </div>
+                                {
+                                show3DKazuha?<p className="grid-item-image-caption">
+                                    Interactive 3D model of Kaedehara Kazuha from Genshin Impact, for game modding <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a onClick={() => toggleShow3DKazuha()}>Toggle between interactive and screenshot.</a> 
+                                </p>:
                                 <p className="grid-item-image-caption">
-                                    3D model of Kaedehara Kazuha from Genshin Impact that I was editing for my friend <i className="fa-solid fa-arrow-turn-up"></i>
+                                    3D model of Kaedehara Kazuha from Genshin Impact that I was editing for my friend <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a onClick={() => toggleShow3DKazuha()}>Toggle between interactive and screenshot.</a>
                                 </p>
+                                }
                             </div>
                             <img alt="3D model" className="grid-item-image-image" src={art3d}/>
                         </div>
@@ -400,6 +411,6 @@ useGLTF.preload('assets/3dModels/traditional-transformed.glb')
 useGLTF.preload('assets/3dModels/compound-transformed.glb')
 useGLTF.preload('assets/3dModels/modernRecurve-transformed.glb')
 useGLTF.preload('assets/3dModels/firstaidbox-transformed.glb')
-//useGLTF.preload('assets/3dModels/kaedeharaKazuha-transformed.glb')
+useGLTF.preload('assets/3dModels/kazuha-transformed.glb')
 
 export default HobbiesScreen;

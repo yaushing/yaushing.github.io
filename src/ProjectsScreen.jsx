@@ -36,6 +36,7 @@ function ProjectsScreen() {
                         <ul className="nav navbar-nav navbar-right">
                             <li><a href="#/about">About Me</a></li>
                             <li className="active"><a href="#/projects">Projects</a></li>
+                            <li><a href="#/achievements">Achievements</a></li>
                         </ul>
                         </div>
                     </div>
