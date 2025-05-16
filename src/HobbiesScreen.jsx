@@ -1,7 +1,13 @@
 import logo from './logo.svg';
-import Carousel from './CarouselLogic';
+import Carousel from './prefabs/Carousel.jsx';
+import Footer from './prefabs/Footer.jsx';
+import Model from './prefabs/ModelViewer.jsx';
 
-import splashBg from './assets/home/images/compound-landscape.jpg';
+import { useGLTF } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { useState } from 'react';
+
+import splashVid from './assets/home/videos/archery.webm'
 import splash from './assets/home/images/hello-splash.gif';
 
 import archery from './assets/home/images/archery.jpg';
@@ -17,27 +23,32 @@ import codingExt2 from './assets/home/images/codingSecondaryExternal.png';
 import cyberSecurity from './assets/home/images/cyberSec.png'
 import bd1 from './assets/home/images/bd1.webp';
 
+import tshirtdesign from './assets/home/images/tshirt.png'
 import art2d from './assets/home/images/2dart.png';
 import art3d from './assets/home/images/3dart.jpeg';
-import artPhys from './assets/home/images/4dart.jpg';
+import artPhys from './assets/home/images/physicalEndUse.jpg';
 
 import sfacpdf from './assets/home/pdfs/sfac.pdf'
 import './assets/css/style.css';
 
-import { useGLTF } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber';
-import Model from './ModelViewer.jsx';
-import { useState } from 'react';
-
 function HobbiesScreen() {
     const vw = document.documentElement.clientHeight;
-    const [show3DKazuha, switchShow3DKazuha] = useState(true);
+    const [show3DKey, switchshow3DKey] = useState(true);
+    const [show15AnniSketch, switchshow15AnniSketch] = useState(true);
 
-    const toggleShow3DKazuha = () => {
-        if (show3DKazuha) {
-            switchShow3DKazuha(false);
+    const toggleshow3DKey = () => {
+        if (show3DKey) {
+            switchshow3DKey(false);
         } else {
-            switchShow3DKazuha(true);
+            switchshow3DKey(true);
+        }
+    }
+
+    const toggleshow15AnniSketch = () => {
+        if (show15AnniSketch) {
+            switchshow15AnniSketch(false);
+        } else {
+            switchshow15AnniSketch(true);
         }
     }
 
@@ -71,8 +82,9 @@ function HobbiesScreen() {
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav navbar-right">
-                            <li className="active"><a href="#/about">About Me</a></li>
-                            <li><a href="#/projects">Projects</a></li>
+                            <li className='active'><a href="#/about">About Me</a></li>
+                            <li><a href="#/schoolProjects">School Projects</a></li>
+                            <li><a href="#/homeProjects">Passion Projects</a></li>
                             <li><a href="#/achievements">Achievements</a></li>
                         </ul>
                         </div>
@@ -81,7 +93,9 @@ function HobbiesScreen() {
             </div>
             <div className="splash">
                 <div className="overlay" />
-                <img alt = "Splash bg" className="bg" src={splashBg} />
+                <video autoPlay muted loop className="bg">
+                    <source src={splashVid} type="video/webm"/>
+                </video>
                 <img alt = "Big Hello" className="anim" src={splash} />
                 <div className="down-arrow-container">
                     <div className="down-arrow">
@@ -94,7 +108,7 @@ function HobbiesScreen() {
                     <div id="archery" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
                             <p>
-                                <strong>Archery <i className="fa-solid fa-bullseye"></i></strong>
+                                <strong>Archery  <i className="fa-solid fa-bullseye"></i></strong>
                             </p>
                             </div>
                         <div className="grid-item grid-item-image">
@@ -110,7 +124,7 @@ function HobbiesScreen() {
                             <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
-                            From young, I was interested in archery, from the "cool archers" on TV. After starting a few years ago and all three major disciplines (see left and right pages for details), I quickly fell in love with it, but primarily for the physics behind how the bow works, from conundrums such as the archer's paradox to the complicated kinematics of gears and pulleys of a compound bow. 
+                            From young, I was interested in archery, from the "cool archers" on TV. After starting a few years ago and all three major disciplines (see left and right pages for details), I quickly fell in love with it, but primarily for the <strong>physics</strong> behind how the bow works, from conundrums such as the archer's paradox to the complicated kinematics of gears and pulleys of a compound bow. 
                         </div>
                     </div>,
                     <div id="archery" className="grid-container grid-left">
@@ -134,7 +148,11 @@ function HobbiesScreen() {
                             <img alt="Archery" className="grid-item-image-image" src={traditionalBow}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
-                            This is the oldest, most simple bow, often called by others as simply 'a stick with a a string across it'. This bow is the source of the age-old “Archer's Paradox”: Arrows are mounted at an angle off to the side, instead of directly forwards - yet, arrows travel forward instead of off to the side. Why? The  answer is that due to the difference in weight of the tip and the shaft, arrows bend when shot, and its rotation will cause it to stabilise in flight, much like a gyroscope. A more in-depth explanation can be found <a href="https://en.wikipedia.org/wiki/Archer%27s_paradox" target="_blank" rel="noreferrer">here</a>.
+                            The traditional bow—just a simple stick and string—is the oldest form of archery, yet it reveals a fascinating bit of physics known as the Archer's Paradox. In traditional archery, arrows are mounted slightly off-centre, which should cause them to fly sideways. But they don't, thanks to Newton's First Law and the arrow's flexibility.
+                            <br />
+                            The arrow's heavy metal tip resists motion more than its lighter wooden shaft. When released, this causes the shaft to bend around the bow, allowing the arrow to correct its off-centre path. As it flies, the arrow oscillates slightly but stabilises. The fletching at the rear also helps, spinning the arrow and adding gyroscopic stability to keep it on course.
+                            <br />
+                            Surprisingly, this ancient tool works thanks to some clever physics in action.
                         </div>
                     </div>,
                     <div id="archery" className="grid-container grid-left">
@@ -158,7 +176,7 @@ function HobbiesScreen() {
                             <img alt="Archery" className="grid-item-image-image" src={archerycrop}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
-                            The most popular bow now in modern days, this is the bow used in Olympic archery and the majority of mainstream archery competitions. It has numerous upgrades from a traditional bow. Arrows can be mounted forward straight through the bow, stopping the “Archer's Paradox”. A stabiliser is added to reduce recoil and move the center of gravity nearer to the hand, a red dot sight for easier target acquisition, and other gizmos to perfect consistency and accuracy — a blend of the physics of a traditional bow and modern mechanics.
+                            The most popular bow now in modern days, this is the bow used in Olympic archery and the majority of mainstream archery competitions. It has numerous upgrades from a traditional bow. Arrows can be mounted forward straight through the bow, stopping the need for archers to rely on the "Archer's Paradox". A stabiliser is added to reduce recoil and move the center of gravity nearer to the hand, a red dot sight for easier target acquisition, and other gizmos to perfect consistency and accuracy — a blend of the physics of a traditional bow and modern mechanics.
                         </div>
                     </div>,
                     <div id="archery" className="grid-container grid-left">
@@ -182,15 +200,48 @@ function HobbiesScreen() {
                             <img alt="Archery" className="grid-item-image-image" src={compoundBow}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
-                            If the Modern Recurve and high-tech physics had a baby, it would be the Compound bow, whose mechanics and physics could be an entire doctorate's research paper on kinematics. Adorned with pulleys, gears, and a plethora of other gizmos, this bow is the most advanced kind of bow in the world. After pulling the the string back, the force drawn will decrease, and after a certain point, the force will spike up to the point where the archer can't pull past it. Often equiped with a magnification scope, glow sights, stabilisers and <strong>even a rangefinder</strong>, the accuracy one can get with this bow is astounding. However, due to the way the bow works, the tension on the string does not act at all to counteract gravity, so the bow will feel much, much heavier compared to other bows when at a full draw.
+                            If the modern recurve bow and high-tech physics had a baby, it would be the compound bow — a marvel of engineering whose mechanics could warrant an entire doctoral thesis in kinematics. Outfitted with pulleys, cams, and a host of other intricate components, the compound bow is the most advanced type of bow in existence.
+                            <br /><br />
+                            When the archer draws the string, the force required initially increases, then sharply drops due to a mechanical advantage called "let-off," making it easier to hold at full draw. However, after a certain point, the draw weight spikes again, preventing the archer from pulling further.
+                            <br /><br />
+                            Often equipped with a magnified scope, glow-in-the-dark sights, stabilizers, and <strong>even a rangefinder</strong>, this bow offers incredible accuracy. But there's a trade-off: because of its cam system, the bowstring's tension does little to counteract gravity. As a result, at full draw, the bow can feel significantly heavier than other types, putting more strain on the archer's muscles during aim.
                         </div>
                     </div>
                 ]}
             />
             <div className = "spacer"><br /><hr /><br /></div>
+            <div id="redcross" className="grid-container grid-right">
+                <div className="grid-item grid-item-title">
+                    <p>
+                        <strong>First Aid <i className="fa-solid fa-suitcase-medical"></i></strong>
+                    </p>
+                    </div>
+                <div className="grid-item grid-item-image">
+                    <div className="image-overlay"></div>
+                    <div className="grid-item-image-container">
+                        <div className="grid-item-image-image-container"> 
+                            <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
+                                <Model source="assets/3dModels/heart-transformed.glb"/>
+                            </Canvas>
+                        </div>
+                        <p className="grid-item-image-caption">
+                            <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> 3D model of a beating human heart 
+                        </p>
+                    </div>
+                    <img alt="Red Cross" className="grid-item-image-image" />
+                </div>
+                <div className="grid-item grid-item-body body-text">
+                    Since 2022, my passion for Biology has driven me to explore how scientific knowledge can be applied to real-life situations. This led me to pursue a <a href={sfacpdf} target="_blank" rel="noreferrer">Standard First Aid certification</a>, which I earned in March 2024 through the Singapore Red Cross. Volunteering at a Blood Bank since then has allowed me to observe key biological principles in action, such as how positions of a person and staying well-hydrated also boosts cerebral perfusion pressure.
+                    <br /><br />
+                    For example, after a donor had donated her blood and was waiting to be bandaged, she raised that she felt slightly lightheaded. Of my own volition, guided by my own knowledge of human biology and the circulatory system, I had moved a chair to place her in a supine position, had fetched a cup of room-temperature water for her to drink. In that moment, I had managed to apply what I had learnt from my self-study of biology: The loss of blood resulted in a reduction of blood volume, which reduced venous return to the heart, which lowered stroke volume, mean arterial pressure and hence cerebral perfusion pressure, which was likely what caused her to be lightheaded
+                    <br /><br />
+                    Drinking water increased the plasma volume in the blood by introducing more fluids, which in turn increases venous return. Furthermore, by moving the donor to a supine position, due to the reduced hydrostatic pressure gradient, the venous return to the heart is also increased. Following the converse of the explanation earlier, this allowed her to no longer feel so lightheaded.
+                </div>
+            </div>
+            <div className = "spacer"><br /><hr /><br /></div>
             <Carousel
                 items={[
-                    <div id="coder" className="grid-container grid-right">
+                    <div id="coder" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
                             <p>
                                 <strong>Coding <i className="fa-solid fa-laptop"></i></strong>
@@ -203,7 +254,7 @@ function HobbiesScreen() {
                                     <img alt="Code" className="grid-item-image-image-inside-container" src={coding}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My code for an informatics olympiad question
+                                My code for an informatics olympiad question <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -212,7 +263,7 @@ function HobbiesScreen() {
                             When people ask me when I started learning to code, I always have to take time to think back. Probably because the first coding course I've ever done was a summer camp introduction to Coding way back in the summer of 2015, at a summer programme at Camp Asia when I was 5. Which means, now, I've been coding for over a decade. In primary school, I joined the coding club, learning micro:bit, minecraft education coding, and basic mbot. I also learned HTML, CSS and JavaScript for my first DSA application. In secondary school, I joined Robotics@Apex as well as its Informatics society, and through it, learnt Python, C++, React.js, SwiftUI, langchain and more. In the next pages are some of the key experiences in my journey for coding.
                         </div>
                     </div>,
-                    <div id="coder" className="grid-container grid-right">
+                    <div id="coder" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
                             <p>
                                 <strong>Primary School <i className="fa-solid fa-laptop"></i></strong>
@@ -225,7 +276,7 @@ function HobbiesScreen() {
                                     <img alt="Scratch" className="grid-item-image-image-inside-container" src={codingPri}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> Flappy Bird made in Scratch that I made in P6
+                                Flappy Bird made in Scratch that I made in P6 <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -234,7 +285,7 @@ function HobbiesScreen() {
                             This was the first period I started coding in. From the summer camp at Camp Asia, I continued my learning, more and more, until I <em>entered</em> Primary School. There I joined the Info-Comm club, where I learnt coding the BBC Micro:Bit, as well as Minecraft Education Edition. I also learnt how to code the MakeBlock mBot, a small robot which was my first experience in robotics. Furthermore, we explored MIT's AppInventor, and made some apps using it. In P5, I made a <a href="https://replit.com/@JamieYS/Global-warming">website</a> using HTML, CSS and JavaScript for a school project on Climate Change, available on repl.it.
                         </div>
                     </div>,
-                    <div id="coder" className="grid-container grid-right">
+                    <div id="coder" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
                             <p>
                                 <strong>External <i className="fa-solid fa-laptop"></i></strong>
@@ -247,7 +298,7 @@ function HobbiesScreen() {
                                     <img alt="Website screenshot" className="grid-item-image-image-inside-container" src={codingExt1}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> The website on Climate Change I made in P5
+                                The website on Climate Change I made in P5 <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -269,7 +320,7 @@ function HobbiesScreen() {
                                     <img alt="Code" className="grid-item-image-image-inside-container" src={codingSec}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> My group's coursework product - a gamified therapist powered by AI.
+                                My group's coursework product - a gamified therapist powered by AI. <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -291,7 +342,7 @@ function HobbiesScreen() {
                                     <img alt="Pigeon Simulator" className="grid-item-image-image-inside-container" src={codingExt2}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> I made a pigeon simulator using Unreal Engine once in S2 when I was bored
+                                I made a pigeon simulator using Unreal Engine once in S2 when I was bored <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -313,7 +364,7 @@ function HobbiesScreen() {
                                     <img alt="Shhhhh" className="grid-item-image-image-inside-container" src={cyberSecurity}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                <i className="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> The quieter you are, the more you are able to hear...
+                                The quieter you are, the more you are able to hear...<i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="Code" className="grid-item-image-image" src={coding}/>
@@ -330,58 +381,7 @@ function HobbiesScreen() {
                     <div id="artist" className="grid-container grid-left">
                         <div className="grid-item grid-item-title">
                             <p>
-                                <strong>2D Art <i className="fa-solid fa-laptop"></i></strong>
-                            </p>
-                            </div>
-                        <div className="grid-item grid-item-image">
-                            <div className="image-overlay"></div>
-                            <div className="grid-item-image-container">
-                                <div className="grid-item-image-image-container"> 
-                                    <img alt="2d artwork" className="grid-item-image-image-inside-container" src={art2d}/>
-                                </div>
-                                <p className="grid-item-image-caption">
-                                Portrait of Nishinoya Yū from Haikyuu I made for a friend <i className="fa-solid fa-arrow-turn-up"></i>
-                                </p>
-                            </div>
-                            <img alt="3D model" className="grid-item-image-image" src={art2d}/>
-                        </div>
-                        <div className="grid-item grid-item-body body-text">
-                            Though I am by no means a professional artist, I still know basic anatomy and design, and have used that on 2D art to create some of my own. I mostly draw using Procreate on my iPad, and here's a taster -{'>'} <br/> I can't claim to be as good as my sister, who can draw seemingly photorealistic buildings with just a pen and paper, and I also can't not use a digital software. Still, I'm motivated to keep my skills in it. Yet, I'm more and more unwilling to spend time on 2D art, to focus on the art on the next page...
-                        </div>
-                    </div>,
-                    <div id="artist" className="grid-container grid-left">
-                        <div className="grid-item grid-item-title">
-                            <p>
-                                <strong>3D Art <i className="fa-solid fa-laptop"></i></strong>
-                            </p>
-                            </div>
-                        <div className="grid-item grid-item-image">
-                            <div className="image-overlay"></div>
-                            <div className="grid-item-image-container">
-                                <div className="grid-item-image-image-container"> 
-                                    {
-                                    show3DKazuha?<Canvas className="grid-item-image-image-inside-container grid-3d-canvas"><Model source="assets/3dModels/kazuha-transformed.glb"/></Canvas>:<img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>
-                                    }
-                                </div>
-                                {
-                                show3DKazuha?<p className="grid-item-image-caption">
-                                    Interactive 3D model of Kaedehara Kazuha from Genshin Impact, for game modding <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a onClick={() => toggleShow3DKazuha()}>Toggle between interactive and screenshot.</a> 
-                                </p>:
-                                <p className="grid-item-image-caption">
-                                    3D model of Kaedehara Kazuha from Genshin Impact that I was editing for my friend <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a onClick={() => toggleShow3DKazuha()}>Toggle between interactive and screenshot.</a>
-                                </p>
-                                }
-                            </div>
-                            <img alt="3D model" className="grid-item-image-image" src={art3d}/>
-                        </div>
-                        <div className="grid-item grid-item-body body-text">
-                            I've been making 3D art for a while now, and I love it. I use Blender to create my models, and I love the process of creating them. From kitbashing together a cyberpunk world to painstakingly crafting a landscape, I also use softwares like Daz3D for quickly making humans, Rokoko for re-targeting animations and Mixamo for prebuilt animations. Then, I craft my own textures and materials using either paint.net on my PC or using my iPad's Procreate. For example, the landing page of this website was made using Blender. Though some of the models are taken off various sites from the internet like CGTrader, SketchFab, or Thingiverse, I still made a number of textures for the it, and the rest of the models are procedurally generated. Sometimes, I use blender to make models for my game development, and I plan to use it for my next website in Web3D.
-                        </div>
-                    </div>,
-                    <div id="artist" className="grid-container grid-left">
-                        <div className="grid-item grid-item-title">
-                            <p>
-                                <strong>Physical obejcts <i className="fa-solid fa-laptop"></i></strong>
+                                <strong>Design and Prototyping <i class="fa-solid fa-pen-ruler"></i></strong>
                             </p>
                             </div>
                         <div className="grid-item grid-item-image">
@@ -391,49 +391,81 @@ function HobbiesScreen() {
                                     <img alt="Physical model" className="grid-item-image-image-inside-container" src={artPhys}/>
                                 </div>
                                 <p className="grid-item-image-caption">
-                                The model my team of SST and Perse School students made <i className="fa-solid fa-arrow-turn-up"></i>
+                                Picture from official SST instagram page <i className="fa-solid fa-arrow-turn-up"></i>
                                 </p>
                             </div>
                             <img alt="3D model" className="grid-item-image-image" src={artPhys}/>
                         </div>
                         <div className="grid-item grid-item-body body-text">
-                            Moving on to a world of art one can touch and feel, I'm familiar with basic CADing. I was taught onShape in Robotics@Apex, and am in charge of the Open platform in it. As such, I teach my juniors how to use Fusion360, as well as BambuStudio. I myself have a BambuLab P1S at home which I use to relise my imaginations. Under a partnership between SST and the Perse School Cambridge, I was also taught how to use Laser Cutters, and used it to create handheld console for the micro:bit in a project to preserve the finger dexterity of the elderly. 
+                            When it comes to design and prototyping, SST has taught me tremendous amounts, such as Computer Aided Design, 3D printing, Laser Cutting, and 3D modelling. To that extent, I am capable of prototyping, designing, and overall creating an end-use product for clients based on their specifications, provided it is possible using 3D printed materials. For example, pictured, from SST's official instagram page, is the 15<sup>th</sup> Anniversary starting ceremony. I personally designed and printed the key in Mr Chan Chun Sing's hand, the hexagonal button he is pushing it into, as well as the leg panels on the robot to the side of him. When he inserted the key into the button, the button lit up, as well as lights on the stage, kickstarting the 15<sup>th</sup> year of SST, with that key and button being the key official "start" of the ceremony.
+                        </div>
+                    </div>,
+                    <div id="artist" className="grid-container grid-left">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>3D Modeling and Prototyping <i class="fa-solid fa-vr-cardboard"></i></strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    {
+                                    show3DKey?<Canvas className="grid-item-image-image-inside-container grid-3d-canvas"><Model source="assets/3dModels/15anniKey-transformed.glb"/></Canvas>:<img alt="3D model" className="grid-item-image-image-inside-container" src={art3d}/>
+                                    }
+                                </div>
+                                {
+                                show3DKey?<p className="grid-item-image-caption">
+                                    Interactive 3D model of the key I made for SST's 15<sup>th</sup> Anniversary <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a href="#/about" onClick={(e) => {e.preventDefault();toggleshow3DKey()}}>Toggle between interactive and screenshot</a> 
+                                </p>:
+                                <p className="grid-item-image-caption">
+                                    3D model of the Key I modeled and printed for 15<sup>th</sup> Anniversary. This was a mockup before I made it in CAD. <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a href="#/about" onClick={(e) => {e.preventDefault();toggleshow3DKey()}}>Toggle between interactive and screenshot</a>
+                                </p>
+                                }
+                            </div>
+                            <img alt="3D model" className="grid-item-image-image" src={art3d}/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            However, I would not have my confidence with navigating a 3D scene if I hadn't gone into SST already familiar with 3D modelling. Though Blender is not Computer Aided Design, I used it when I was younger as it was much, much easier to create large, complex models using it and render it photorealistically. Even now, I use it to make 3D art and renders, both on a micro scale and macro scale. For example, the videos on the landing page of this site were all rendered in Blender. The human was made using Daz3D, Rokoko and Mixamo, and the cyberpunk city using geometry nodes, some of my own models, and some models taken off of the internet. Though some of the models are taken off various sites from the internet like CGTrader, SketchFab, or Thingiverse, I still made a number of textures for the it, and the rest of the models are procedurally generated. Sometimes, I use blender to make models for my game development, and I plan to use it for my next website in Web3D. Other than that, I also use Blender for game development and game modding, as shown in this picture.
+                        </div>
+                    </div>,
+                    <div id="artist" className="grid-container grid-left">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>2D Design <i className="fa-solid fa-laptop"></i></strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="2d artwork" className="grid-item-image-image-inside-container" src={show15AnniSketch?art2d:tshirtdesign}/>
+                                </div>
+                                {
+                                    show15AnniSketch?<p className="grid-item-image-caption">
+                                    My idea sketches for the key, the inner circuits and the façade of the button <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a href="#/about" onClick={(e) => {e.preventDefault();toggleshow15AnniSketch()}}>Toggle between the 15<sup>th</sup> Anniversary sketch and graduation T-shirt design</a> 
+                                    </p>:
+                                    <p className="grid-item-image-caption">
+                                    The design I submitted to the school to contend as the graduation shirt for my batch <i className="fa-solid fa-arrow-turn-up"></i> <br /> <a href="#/about" onClick={(e) => {e.preventDefault();toggleshow15AnniSketch()}}>Toggle between the 15<sup>th</sup> Anniversary sketch and graduation T-shirt design</a> 
+                                    </p>
+                                }
+                            </div>
+                            <img alt="3D model" className="grid-item-image-image" src={art2d}/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            Even 3D design has its roots in 2D sketches. For me, I often use Procreate on my iPad to sketch designs, before turning them into what I want to see in practice. For example, pictured is the rough design schematics of the key and button for the 15<sup>th</sup> Anniversary celebrations, which includes what the top part of the button with the slot would look like, what the button would look like from the front (if x-rayed through), a mockup of the key, as well as a rough idea of what the inner circuitry would look like to light up the button. The other picture (for computers) is the deisgn that I made for my class as our class submission to be voted on as the cohort graduation shirt. Besides just sketches, when I'm 3D modelling, no scene would look good without textures, which are 2D images which has to be made with a digital software. If I want to make my own, I will use my iPad to make it, be it for a custom model, a game mod, a game character or more.
                         </div>
                     </div>
                 ]}
             />
-            <div className = "spacer"><br /><hr /><br /></div>
-            <div id="redcross" className="grid-container grid-right">
-                <div className="grid-item grid-item-title">
-                    <p>
-                        <strong>First Aid <i className="fa-solid fa-suitcase-medical"></i></strong>
-                    </p>
-                    </div>
-                <div className="grid-item grid-item-image">
-                    <div className="image-overlay"></div>
-                    <div className="grid-item-image-container">
-                        <div className="grid-item-image-image-container"> 
-                            <Canvas className="grid-item-image-image-inside-container grid-3d-canvas">
-                                <Model source="assets/3dModels/firstaidbox-transformed.glb"/>
-                            </Canvas>
-                        </div>
-                        <p className="grid-item-image-caption">
-                            3D model of a futuristic first aid kit <i className="fa-solid fa-arrow-turn-up"></i>
-                        </p>
-                    </div>
-                    <img alt="Red Cross" className="grid-item-image-image" />
-                </div>
-                <div className="grid-item grid-item-body body-text">
-                    Since 2022, I was interested in getting a first aid certification to help others. In March 2024, I finally got my <a href={sfacpdf} target="_blank" rel="noreferrer">Standard First Aid certification</a> from the Singapore Red Cross, accredited by the Singapore Resuscitation and First Aid Council. Now, every other Saturday, with other members of the Singapore Red Cross, I either cycle around Jurong Lake Gardens providing first aid to the injured as part of <a href = "https://redcross.sg/first-aiders-on-wheels.html" target = "_blank" rel="noreferrer">First Aiders on Wheels</a>, or help bandage blood donors at West Gate Bloodbank, improving the flow of donors while ensuring their comfort. Unfortunately, I have not been able to volunteer as much as I would like to, due to my busy schedule. However, I am still a first aider, and I will always be ready to help others in need. Due to security reasons, I cannot show any photos of me inside the blood bank. 
-                </div>
-            </div>
+            <Footer/>
         </div>
     );
 }
 useGLTF.preload('assets/3dModels/traditional-transformed.glb')
 useGLTF.preload('assets/3dModels/compound-transformed.glb')
 useGLTF.preload('assets/3dModels/modernRecurve-transformed.glb')
-useGLTF.preload('assets/3dModels/firstaidbox-transformed.glb')
-useGLTF.preload('assets/3dModels/kazuha-transformed.glb')
+useGLTF.preload('assets/3dModels/heart-transformed.glb')
+useGLTF.preload('assets/3dModels/15annikKey-transformed.glb')
 
 export default HobbiesScreen;

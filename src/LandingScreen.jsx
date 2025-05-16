@@ -1,14 +1,20 @@
-import { Canvas } from '@react-three/fiber';
-import Model from './ModelViewer.jsx';
+import humanVid from './assets/landing/humanVid.webm'
+import cityVid from './assets/landing/full.webm'
+import './assets/css/style.css';
 function LandingScreen() {
     return (
         <div className='main-content'>
-            <a href="/#/about" style={{textAlign:"center"}} className="btn btn-success">Start</a>
-            <Canvas>
-                <Model 
-                    source={"/assets/3dModels/modernRecurve-transformed.glb"}
-                />
-            </Canvas>
+            <div className="splash">
+                <div className="landing-overlay" />
+                <video autoPlay loop muted className="bg">
+                    <source src={humanVid} type="video/webm"/>
+                </video>
+            </div>
+            <div className="anyKey" onClick={() => window.open("https://yaushing.github.io/#/about", "_self")}>
+                <p>
+                    Press Any Key to Continue...
+                </p>
+            </div>
         </div>
     );
 }

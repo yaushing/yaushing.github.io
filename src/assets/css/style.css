@@ -8,6 +8,10 @@ footer {
     text-align: center;
 }
 
+.footer-text {
+    font-size: small !important;
+}
+
 .navbar-brand-image {
     height: 50px;
     float: left;
@@ -413,7 +417,7 @@ footer {
 }
 
 .splash {
-    height: 100svh;
+    height: 100lvh;
     width: 100lvw;
     text-align: center;
     display: grid;
@@ -422,7 +426,7 @@ footer {
 }
 
 .splash>.overlay {
-    height: 100svh;
+    height: 100lvh;
     width: 100lvw;
     background-color: black;
     opacity: 0.5;
@@ -491,4 +495,49 @@ footer {
 .courseworkGIFContainer {
     width: auto;
     height: auto;
+}
+
+/* Landing page */
+.landing-overlay {
+    animation: fadein 2s forwards;
+    height: 100lvh;
+    width: 100lvw;
+    background-color: black;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 200;
+}
+
+@keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 0.5}
+}
+
+.anyKey {
+    position: absolute;
+    height: 100lvh;
+    width: 100lvw;
+    transform:translateY(-100lvh);
+    z-index: 255;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.anyKey > p {
+    background-color: #333;
+    border: 1px solid #333;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    animation: fullfadein 3s ease-in-out infinite alternate;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: medium;
+}
+
+@keyframes fullfadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
 }

@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import splash from './assets/projects/images/projects-splash.gif';
 import './assets/css/style.css';
+import Carousel from './prefabs/Carousel';
+import Footer from './prefabs/Footer'
 
 function AchievementsScreen() {
     const vw = document.documentElement.clientHeight;
@@ -52,28 +54,125 @@ function AchievementsScreen() {
                     </div>
                 </div>
             </div>
-            <div id="blah" className="grid-container grid-left">
-                <div className="grid-item grid-item-title">
-                    <p>
-                        <strong>Title goes here</strong>
-                    </p>
-                    </div>
-                <div className="grid-item grid-item-image">
-                    <div className="image-overlay"></div>
-                    <div className="grid-item-image-container">
-                        <div className="grid-item-image-image-container"> 
-                            <img alt="Goes here" className="grid-item-image-image-inside-container"/>
+            <Carousel
+                items={[
+                    <div id="endeavour" className="grid-container grid-left">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>Astrophysics: The Astronaut Al Worden "Endeavour" Space Challenge</strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="Goes here" className="grid-item-image-image-inside-container"/>
+                                </div>
+                                <p className="grid-item-image-caption">
+                                    Caption goes here <i class="fa-solid fa-arrow-turn-up"></i>
+                                </p>
+                            </div>
+                            <img alt="Background" className="grid-item-image-image"/>
                         </div>
-                        <p className="grid-item-image-caption">
-                            Caption goes here <i class="fa-solid fa-arrow-turn-up"></i>
-                        </p>
+                        <div className="grid-item grid-item-body body-text">
+                            Yap here
+                        </div>
+                    </div>,
+                    <div id="endeavour" className="grid-container grid-left">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>Astrophysics: The Astronaut Al Worden "Endeavour" Scholarship</strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="Goes here" className="grid-item-image-image-inside-container"/>
+                                </div>
+                                <p className="grid-item-image-caption">
+                                    Caption goes here <i class="fa-solid fa-arrow-turn-up"></i>
+                                </p>
+                            </div>
+                            <img alt="Background" className="grid-item-image-image"/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            Yap here
+                        </div>
+                    </div>,
+                    <div id="endeavour" className="grid-container grid-left">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>Washington D.C.</strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="Goes here" className="grid-item-image-image-inside-container"/>
+                                </div>
+                                <p className="grid-item-image-caption">
+                                    Caption goes here <i class="fa-solid fa-arrow-turn-up"></i>
+                                </p>
+                            </div>
+                            <img alt="Background" className="grid-item-image-image"/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            Yap here
+                        </div>
+                    </div>,
+                    <div id="endeavour" className="grid-container grid-left">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>International Space Camp</strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="Goes here" className="grid-item-image-image-inside-container"/>
+                                </div>
+                                <p className="grid-item-image-caption">
+                                    Caption goes here <i class="fa-solid fa-arrow-turn-up"></i>
+                                </p>
+                            </div>
+                            <img alt="Background" className="grid-item-image-image"/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            Yap here
+                        </div>
                     </div>
-                    <img alt="Background" className="grid-item-image-image"/>
-                </div>
-                <div className="grid-item grid-item-body body-text">
-                    Yap here
-                </div>
-            </div>
+                ]}
+            />
+            <Carousel
+                items={[
+                    <div id="opportunity X" className="grid-container grid-right">
+                        <div className="grid-item grid-item-title">
+                            <p>
+                                <strong>Biology / Research: The </strong>
+                            </p>
+                            </div>
+                        <div className="grid-item grid-item-image">
+                            <div className="image-overlay"></div>
+                            <div className="grid-item-image-container">
+                                <div className="grid-item-image-image-container"> 
+                                    <img alt="Goes here" className="grid-item-image-image-inside-container"/>
+                                </div>
+                                <p className="grid-item-image-caption">
+                                    <i class="fa-solid fa-arrow-turn-up fa-flip-horizontal"></i> Caption goes here 
+                                </p>
+                            </div>
+                            <img alt="Background" className="grid-item-image-image"/>
+                        </div>
+                        <div className="grid-item grid-item-body body-text">
+                            Yap here
+                        </div>
+                    </div>
+                ]}
+            />
+            <Footer />
         </div>
     );
 }
